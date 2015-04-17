@@ -1,0 +1,21 @@
+# OS Generated Files
+.DS_Store
+.DS_Store?
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+.svn
+.sass-cache
+
+*.o
+*.so
+*.pyc
+
+# vim
+*.swp

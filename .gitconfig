@@ -1,0 +1,13 @@
+[user]
+	name = Ben Cook
+	email = b@bencook.ca
+[core]
+	editor = vi
+	excludesfile = /Users/bc/.gitignore-global
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+	co = checkout
+    ba = branch -a
+    ca = commit -am 
+[push]
+	default = simple
