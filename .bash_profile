@@ -9,6 +9,8 @@ alias ll='ls -lhGT'
 # Use GNU rm(1) and prompt before rm'ing > 3 files or recursively
 alias rm='grm -I'
 
+alias fuck='sudo $(history -p \!\!)'
+
 export PS1="\u@\h \W\$ "
 
 export EDITOR='vim'
