@@ -14,7 +14,7 @@ export PS1="\u@\h \W\$ "
 export EDITOR='vim'
 
 # Red and scary
-export SUDO_PS1="\[\e[33;1;41m\][\u@\h] \w#\[\e[0m\] "
+export SUDO_PS1="\[\e[33;97;41m\][\u@\h] \w#\[\e[0m\] "
 
 export R_LIBS="~/R-packages"
 
