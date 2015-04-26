@@ -1,0 +1,46 @@
+#!/bin/bash
+
+### OS X
+
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+
+
+### Homebrew
+
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# GNU rm(1) and co
+brew install coreutils
+
+brew install node
+brew install hub
+brew install trash
+brew install gnupg
+
+# wrap git
+eval "$(hub alias -s)"
+
+
+### Setup Vim plugins
+
+# Pathogen
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+# Everything else
+cd ~/.vim/bundle
+git clone kchmck/vim-coffee-script
+git clone digitaltoad/vim-jade
+git clone elzr/vim-json
+git clone plasticboy/vim-markdown
+git clone guns/vim-clojure-static
+
+git clone tpope/vim-repeat
+git clone tpope/vim-surround
+
+
+### Python
+
+sudo easy_install pip
+sudo pip install virtualenv
+
