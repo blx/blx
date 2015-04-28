@@ -6,6 +6,8 @@ alias ls='ls -AFG'
 # -long -human suffixes -G colours -T complete time info
 alias ll='ls -lhGT'
 
+export BC="/Volumes/BENC timemachine/Backups.backupdb/benmac/Latest/Macintosh HD/Users/bc"
+
 # Use GNU rm(1) and prompt before rm'ing > 3 files or recursively
 alias rm='grm -I'
 
