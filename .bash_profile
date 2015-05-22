@@ -6,12 +6,18 @@ alias ls='ls -AFG'
 # -long -human suffixes -G colours -T complete time info
 alias ll='ls -lhGT'
 
+alias ping1='ping -c 1'
+
+alias startpg='postgres -D /usr/local/var/postgres'
+
 export BC="/Volumes/BENC timemachine/Backups.backupdb/benmac/Latest/Macintosh HD/Users/bc"
 
 # Use GNU rm(1) and prompt before rm'ing > 3 files or recursively
 alias rm='grm -I'
 
 alias fuck='sudo $(history -p \!\!)'
+
+alias stripexif='exiftool -all= -overwrite_original'
 
 export PS1="\u@\h \W\$ "
 
