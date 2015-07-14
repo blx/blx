@@ -43,6 +43,7 @@ alias gst='git status'
 
 alias cdmeet='cd ~/Documents/School/year\ 2/cpsc\ 210\ ta\ term2/meetup-phase2'
 alias cdsch='cd ~/Documents/School/year\ 2/'
+alias cdb='cd ~/projects/btcbuy/btcbuy'
 
 #alias php54="/usr/local/php5/bin/php"
 #alias tw="open -a TextWrangler"
@@ -79,7 +80,7 @@ fi
 
 #export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
-export PATH=/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Developer/Tools/Panda3D:/usr/texbin:/usr/local/bin:/Users/bc/Qt/5.3/clang_64/bin:/Users/bc/Downloads/Software/phantomjs-1.9.8-macosx/bin
+export PATH=/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
