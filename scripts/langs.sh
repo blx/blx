@@ -4,6 +4,7 @@ clang --version | head -n 1
 gcc-5 --version | head -n 1
 gfortran --version | head -n 1
 ghc --version
+go version
 ocaml -version
 php --version | head -n 1
 python --version
