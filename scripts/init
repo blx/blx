@@ -16,6 +16,10 @@ brew install node
 brew install hub
 brew install trash
 brew install gnupg
+brew install python3
+brew install leiningen
+brew install go
+brew install heroku-toolbelt
 
 # wrap git
 eval "$(hub alias -s)"
@@ -34,6 +38,8 @@ git clone digitaltoad/vim-jade
 git clone elzr/vim-json
 git clone plasticboy/vim-markdown
 git clone guns/vim-clojure-static
+git clone fatih/vim-go
+git clone rust-lang/rust.vim
 
 git clone tpope/vim-repeat
 git clone tpope/vim-surround
@@ -42,5 +48,5 @@ git clone tpope/vim-surround
 ### Python
 
 sudo easy_install pip
-sudo pip install virtualenv
+sudo -H pip install virtualenv
 

@@ -34,6 +34,9 @@ eval "$(hub alias -s)"
 # expand aliases into sudo
 alias sudo='sudo '
 
+# Golang
+export GOPATH=$HOME/go
+
 alias runsight='cd ~/sight; source sightenv/bin/activate; cd app;  sass --watch sight/assets:sight/static/css & python runserver.py;'
 
 alias simplemachine='cd ~/Documents/School/year\ 2/cpsc\ 213/cpsc213-java-workspace/Simple\ Machine; java -cp SimpleMachine213.jar:bin SimpleMachine -i gui -a sm213 -v solution;'
@@ -80,16 +83,4 @@ fi
 
 #export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
-export PATH=/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-##
-# Your previous /Users/bc/.bash_profile file was backed up as /Users/bc/.bash_profile.macports-saved_2014-11-04_at_18:52:08
-##
-
-# MacPorts Installer addition on 2014-11-04_at_18:52:08: adding an appropriate PATH variable for use with MacPorts.
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
-
+export PATH=/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin
