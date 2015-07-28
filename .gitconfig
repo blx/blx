@@ -9,5 +9,6 @@
 	co = checkout
     ba = branch -a
     ca = commit -am 
+    d = diff
 [push]
 	default = simple
