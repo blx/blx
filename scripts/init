@@ -11,6 +11,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 # GNU rm(1) and co
 brew install coreutils
+brew install rlwrap
 
 brew install node
 brew install hub
