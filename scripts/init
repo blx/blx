@@ -20,6 +20,7 @@ brew install python3
 brew install leiningen
 brew install go
 brew install heroku-toolbelt
+brew install vim
 
 # wrap git
 eval "$(hub alias -s)"

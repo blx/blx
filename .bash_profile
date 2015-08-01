@@ -6,6 +6,10 @@ alias ls='ls -AFG'
 # -long -human suffixes -G colours -T complete time info
 alias ll='ls -lhGT'
 
+# Point vi to vim, which points to homebrew vim
+# to allow copy/paste support
+alias vi='vim'
+
 alias ping1='ping -c 1'
 
 alias startpg='postgres -D /usr/local/var/postgres'

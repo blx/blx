@@ -25,6 +25,8 @@ set undolevels=1000
 set wildignore=*.pyc
 set title        " set the terminal's title
 
+set clipboard=unnamed
+
 filetype plugin indent on
 
 set nofoldenable
