@@ -46,6 +46,8 @@ autocmd BufNewFile,BufRead *.less set filetype=css
 autocmd BufNewFile,BufRead *.cljs.hl set filetype=clojure
 autocmd BufNewFile,BufRead *.cljs set filetype=clojure
 
+autocmd BufNewFile,BufRead *.es6 set filetype=javascript
+
 " use w!! to sudo-write after opening
 cmap w!! w !sudo tee % >/dev/null
 
