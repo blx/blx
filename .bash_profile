@@ -10,6 +10,9 @@ alias ll='ls -lhGT'
 # to allow copy/paste support
 alias vi='vim'
 
+# Use homebrew python instead of system
+alias python='python2'
+
 alias ping1='ping -c 1'
 
 alias startpg='postgres -D /usr/local/var/postgres'
