@@ -12,16 +12,38 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 # GNU rm(1) and co
 brew install coreutils
 brew install rlwrap
+brew install gcc
 
 brew install node
 brew install hub
 brew install trash
+brew install wget
 brew install gnupg
+brew install python
 brew install python3
 brew install leiningen
 brew install go
 brew install heroku-toolbelt
 brew install vim
+brew install exiftool
+brew install httpie
+brew install postgresql
+
+brew cask install betterzipql
+brew cask install google-chrome
+brew cask install dropbox
+brew cask install bartender
+brew cask install spotify
+brew cask install iterm2
+brew cask install soundflower
+brew cask install transmission
+brew cask install flux
+brew cask install geotag
+brew cask install mplayerx
+
+brew tap caskroom/versions
+brew cask install lightroom3
+
 
 # wrap git
 eval "$(hub alias -s)"
@@ -35,6 +57,8 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 # Everything else
 cd ~/.vim/bundle
+git clone othree/html5.vim
+git clone hail2u/vim-css3-syntax
 git clone kchmck/vim-coffee-script
 git clone digitaltoad/vim-jade
 git clone elzr/vim-json
