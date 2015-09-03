@@ -49,6 +49,10 @@ brew cask install lightroom3
 eval "$(hub alias -s)"
 
 
+# create Go path referred to in .bash_profile
+mkdir ~/go
+
+
 ### Setup Vim plugins
 
 # Pathogen
