@@ -48,6 +48,8 @@ alias simplemachine='cd ~/Documents/School/year\ 2/cpsc\ 213/cpsc213-java-worksp
 
 # laziness: maximum.
 alias gst='git status'
+alias gc='git checkout'
+alias gd='git diff'
 
 alias cdsch='cd ~/Documents/School/year\ 2/'
 alias cdb='cd ~/projects/btcbuy/btcbuy'
