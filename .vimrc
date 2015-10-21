@@ -48,6 +48,10 @@ autocmd BufNewFile,BufRead *.cljs set filetype=clojure
 
 autocmd BufNewFile,BufRead *.es6 set filetype=javascript
 
+" Optimize for typing :keywords in clojure
+autocmd BufNewFile,BufRead *.clj inoremap ; :
+autocmd BufNewFile,BufRead *.clj inoremap : ;
+
 " use w!! to sudo-write after opening
 cmap w!! w !sudo tee % >/dev/null
 
