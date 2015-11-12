@@ -16,10 +16,17 @@ set shiftwidth=4  " number of spaces for indenting
 set smarttab
 set smartcase     " ignore case if search pattern is lowercase
 set hlsearch      " highlight search results
+hi Search cterm=NONE ctermfg=white ctermbg=blue
 
 set cursorline    " underline the current line
+set colorcolumn=85
 
 set backspace=indent,eol,start
+
+
+set list    " show hidden chars (only tabs though)
+"set listchars=tab:▸\ ,eol:¬
+set listchars=tab:▸\ 
 
 
 set history=1000
@@ -48,9 +55,11 @@ autocmd BufNewFile,BufRead *.cljs set filetype=clojure
 
 autocmd BufNewFile,BufRead *.es6 set filetype=javascript
 
-" Optimize for typing :keywords in clojure
+" Optimize for typing colons in python and clojure
 autocmd BufNewFile,BufRead *.clj inoremap ; :
 autocmd BufNewFile,BufRead *.clj inoremap : ;
+autocmd BufNewFile,BufRead *.py inoremap ; :
+autocmd BufNewFile,BufRead *.py inoremap : ;
 
 " use w!! to sudo-write after opening
 cmap w!! w !sudo tee % >/dev/null
