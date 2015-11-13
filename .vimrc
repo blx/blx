@@ -11,6 +11,7 @@ set nowrap
 set expandtab
 set tabstop=4
 set autoindent
+set pastetoggle=<F2>
 set timeoutlen=60
 set number        " show line numbers
 set shiftwidth=4  " number of spaces for indenting
