@@ -32,14 +32,14 @@ export EDITOR='vim'
 # Red and scary
 export SUDO_PS1="\[\e[33;97;41m\][\u@\h] \w#\[\e[0m\] "
 
+# expand aliases into sudo
+alias sudo='sudo '
+
 # Golang
 export GOPATH=$HOME/go
 
 # Wrap git
 eval "$(hub alias -s)"
-
-# expand aliases into sudo
-alias sudo='sudo '
 
 alias runsight='cd ~/sight; source sightenv/bin/activate; cd app;  sass --watch sight/assets:sight/static/css & python runserver.py;'
 
@@ -59,16 +59,16 @@ alias grem='git remote -v'
 alias gb='git branch -av'
 alias gbl='git branch -v'
 
-function getyoutubeaudio() {
+getyoutubeaudio() {
   ffmpeg -i "$1" -f mp4 -vn -acodec copy "$2"
 }
 
-function cdls() {
+cdls() {
     cd $1 && ls
 }
 
 llf() {
-    ls -lhS | fgrep "$@" ;
+    ll | grep "$@"
 }
 
 export PATH=/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin
