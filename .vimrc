@@ -52,6 +52,9 @@ nnoremap ; :
 " hit Return to clear search highlighting
 nnoremap <CR> :noh<CR>
 
+" shift-up to select from previous char up to end of previous line
+nnoremap <s-up> hvk$
+
 "let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#default#layout = [
