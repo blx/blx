@@ -22,7 +22,6 @@ brew install gnupg
 brew install python
 brew install python3
 brew install leiningen
-brew install go
 brew install heroku-toolbelt
 brew install vim
 brew install exiftool
@@ -78,7 +77,7 @@ git clone tpope/vim-surround
 ### Python
 
 sudo easy_install pip
-sudo -H pip install virtualenv
+sudo -H pip install virtualenv requests
 
 
 ### TrueCrypt
