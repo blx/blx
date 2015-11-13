@@ -37,6 +37,8 @@ set listchars=tab:▸\
 set history=1000
 set undolevels=1000
 set title        " set the terminal's title
+set splitright
+set splitbelow
 
 set wildmenu
 set wildmode=list:longest
