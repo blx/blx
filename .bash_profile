@@ -51,6 +51,11 @@ alias simplemachine='cd ~/Documents/School/year\ 2/cpsc\ 213/cpsc213-java-worksp
 alias gst='git status'
 alias gc='git checkout'
 alias gd='git diff'
+alias gt='git commit'
+alias gf='git fetch'
+alias gp='git push'
+alias gpl='git pull'
+alias gl='git lg'
 
 alias cdsch='cd ~/Documents/School/year\ 2/'
 alias cdb='cd ~/projects/btcbuy/btcbuy'
