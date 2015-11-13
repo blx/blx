@@ -7,6 +7,7 @@ syntax on
 
 set synmaxcol=900 " don't try to highlight long lines
 
+set hidden
 set nowrap
 set expandtab
 set tabstop=4
@@ -37,6 +38,8 @@ set history=1000
 set undolevels=1000
 set title        " set the terminal's title
 
+set wildmenu
+set wildmode=list:longest
 set wildignore=*.pyc
 set wildignore+=*DS_Store*
 
