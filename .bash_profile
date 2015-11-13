@@ -44,20 +44,19 @@ alias sudo='sudo '
 alias runsight='cd ~/sight; source sightenv/bin/activate; cd app;  sass --watch sight/assets:sight/static/css & python runserver.py;'
 
 # laziness: maximum.
-alias gst='git status'
+alias g='git status'
 alias gc='git checkout'
 alias gd='git diff'
-alias gt='git commit'
-alias ga='git commit -am'
+alias gt='git commit -m'
+alias gat='git commit -am'
+alias ga='git add'
+alias gap='git add --patch'
 alias gf='git fetch'
 alias gp='git push'
 alias gpl='git pull'
 alias gl='git lg'
 alias grem='git remote -v'
 alias gb='git branch -av'
-
-alias cdsch='cd ~/Documents/School/year\ 2/'
-alias cdb='cd ~/projects/btcbuy/btcbuy'
 
 function getyoutubeaudio() {
   ffmpeg -i "$1" -f mp4 -vn -acodec copy "$2"
@@ -74,7 +73,5 @@ llf() {
 if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
     . /opt/local/etc/profile.d/bash_completion.sh
 fi
-
-#export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
 export PATH=/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin
