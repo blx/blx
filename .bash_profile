@@ -57,6 +57,7 @@ alias gpl='git pull'
 alias gl='git lg'
 alias grem='git remote -v'
 alias gb='git branch -av'
+alias gbl='git branch -v'
 
 function getyoutubeaudio() {
   ffmpeg -i "$1" -f mp4 -vn -acodec copy "$2"
