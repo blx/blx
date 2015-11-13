@@ -8,6 +8,7 @@ syntax on
 set synmaxcol=900 " don't try to highlight long lines
 
 set hidden
+set autoread
 set nowrap
 set expandtab
 set tabstop=4
