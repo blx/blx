@@ -72,6 +72,7 @@ git clone rust-lang/rust.vim
 
 git clone tpope/vim-repeat
 git clone tpope/vim-surround
+git clone bling/vim-airline
 
 
 ### Python

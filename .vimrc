@@ -11,6 +11,7 @@ set nowrap
 set expandtab
 set tabstop=4
 set autoindent
+set timeoutlen=60
 set number        " show line numbers
 set shiftwidth=4  " number of spaces for indenting
 set smarttab
@@ -20,6 +21,7 @@ hi Search cterm=NONE ctermfg=white ctermbg=blue
 
 set cursorline    " underline the current line
 set colorcolumn=85
+set laststatus=2  " always show statusbar (+ enable vim-airline)
 
 set backspace=indent,eol,start
 
@@ -46,6 +48,13 @@ nnoremap ; :
 
 " hit Return to clear search highlighting
 nnoremap <CR> :noh<CR>
+
+"let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#default#layout = [
+    \ [ 'c' ],
+    \ [ 'z' ]
+    \ ]
 
 " use CSS syntax on LESS files
 autocmd BufNewFile,BufRead *.less set filetype=css
