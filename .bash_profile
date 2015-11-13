@@ -12,6 +12,7 @@ alias vi='vim'
 
 # Use homebrew python instead of system
 alias python='python2'
+alias py='python2'
 
 alias ping1='ping -c 1'
 
