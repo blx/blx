@@ -19,6 +19,7 @@ set smarttab
 set smartcase     " ignore case if search pattern is lowercase
 set hlsearch      " highlight search results
 hi Search cterm=NONE ctermfg=white ctermbg=blue
+hi Visual ctermbg=LightGreen
 
 set cursorline    " underline the current line
 set colorcolumn=85
