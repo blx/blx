@@ -32,8 +32,6 @@ export EDITOR='vim'
 # Red and scary
 export SUDO_PS1="\[\e[33;97;41m\][\u@\h] \w#\[\e[0m\] "
 
-export R_LIBS="~/R-packages"
-
 # Golang
 export GOPATH=$HOME/go
 
@@ -44,8 +42,6 @@ eval "$(hub alias -s)"
 alias sudo='sudo '
 
 alias runsight='cd ~/sight; source sightenv/bin/activate; cd app;  sass --watch sight/assets:sight/static/css & python runserver.py;'
-
-alias simplemachine='cd ~/Documents/School/year\ 2/cpsc\ 213/cpsc213-java-workspace/Simple\ Machine; java -cp SimpleMachine213.jar:bin SimpleMachine -i gui -a sm213 -v solution;'
 
 # laziness: maximum.
 alias gst='git status'
