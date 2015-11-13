@@ -6,10 +6,6 @@
     excludesfile = /Users/ben/.gitignore-global
 [alias]
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
-    co = checkout
-    ba = branch -a
-    ca = commit -am 
-    d = diff
 [push]
     default = simple
 [filter "lfs"]
