@@ -53,7 +53,9 @@ nnoremap ; :
 nnoremap <CR> :noh<CR>
 
 " shift-up to select from previous char up to end of previous line
-nnoremap <s-up> hvk$
+" nnoremap <s-up> hvk$
+" shift-up = delete from previous char up to end of prev line
+nnoremap <s-up> hvk$c<space><esc>+
 
 "let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#whitespace#enabled = 0
