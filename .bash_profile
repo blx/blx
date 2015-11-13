@@ -25,6 +25,8 @@ alias fuck='sudo $(history -p \!\!)'
 
 alias stripexif='exiftool -all= -overwrite_original'
 
+alias brewup='brew update && brew upgrade && brew cleanup'
+
 export PS1="\u@\h \W\$ "
 
 export EDITOR='vim'
