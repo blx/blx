@@ -34,8 +34,10 @@ set listchars=tab:▸\
 
 set history=1000
 set undolevels=1000
-set wildignore=*.pyc
 set title        " set the terminal's title
+
+set wildignore=*.pyc
+set wildignore+=*DS_Store*
 
 set clipboard=unnamed
 
