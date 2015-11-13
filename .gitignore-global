@@ -19,3 +19,6 @@ Icon
 
 # vim
 *.swp
+*.swo
+*.swn
+*.swm
