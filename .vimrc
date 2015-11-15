@@ -65,6 +65,14 @@ nnoremap <silent> <Plug>DeleteUntilEndAbove hvk$c<space><esc>+
             \:call repeat#set("\<Plug>DeleteUntilEndAbove")<CR>
 nmap <s-up> <Plug>DeleteUntilEndAbove
 
+
+" Go to next line after leaving visual mode
+xnoremap <esc> <esc>j
+
+" Reselect selection after each indent
+xnoremap > >gv
+xnoremap < <gv
+
 "let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#default#layout = [
