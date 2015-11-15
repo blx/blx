@@ -1,8 +1,33 @@
 #!/bin/bash
 
+# Ansible??? No sorry I don't know her 💁
+
+set -e
+
 ### OS X
 
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+
+## Disable Caps Lock in preparation for installing Seil (which will remap it to Esc)
+#  (https://apple.stackexchange.com/a/88096)
+#  First, ugly script to get our keyboard's VendorID and ProductID:
+read kb_vendorid kb_productid < \
+    <(ioreg -n IOHIDKeyboard -r \
+      | grep -e 'class IOHIDKeyboard' -e VendorID\" -e Product \
+      | sed -nE 's/^.*= *//p' \
+      | tail -n 2 \
+      | paste -s -)
+
+# Now disable Caps Lock (map key 0 to action -1)
+defaults -currentHost write -g \
+    com.apple.keyboard.modifiermapping.${kb_vendorid}-${kb_productid}-0 \
+    -array-add $(printf '%s' '<dict>' \
+                                '<key>HIDKeyboardModifierMappingDst</key>' \
+                                '<integer>-1</integer>' \
+                                '<key>HIDKeyboardModifierMappingSrc</key>' \
+                                '<integer>0</integer>' \
+                             '</dict>')
+
 
 
 ### Homebrew
