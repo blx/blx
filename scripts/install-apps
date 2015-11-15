@@ -1,0 +1,20 @@
+#!/bin/bash
+
+set -e
+
+brew tap cheba/rust-nightly
+
+for x in rust-nightly ocaml ghc cabal-install r go \
+         exiftool postgresql httpie ffmpeg youtube-dl mobile-shell; do
+    brew install $x
+done
+
+# create Go path referred to in .bash_profile
+mkdir -p ~/go
+
+brew tap caskroom/versions
+
+for x in betterzipql google-chrome dropbox bartender1 spotify iterm2 soundflower \
+         transmission flux geotag mplayerx lightroom3; do
+    brew cask install $x
+done

@@ -32,78 +32,71 @@ defaults -currentHost write -g \
 
 ### Homebrew
 
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew_install=.__ben_init_brew.rb
+curl -fsSLo $brew_install https://raw.githubusercontent.com/Homebrew/install/master/install
+read -n1 -rsp $'Opening Homebrew install script in vim. Verify contents, save and quit to continue. Result is piped into ruby.\n\nPress any key to continue...\n'
+vim $brew_install
+ruby $brew_install
+rm $brew_install
 
 # GNU rm(1) and co
 brew install coreutils
-brew install rlwrap
-brew install gcc
 
-brew install node
-brew install hub
-brew install trash
-brew install wget
-brew install gnupg
-brew install python
-brew install python3
-brew install leiningen
-brew install heroku-toolbelt
-brew install vim
-brew install exiftool
-brew install httpie
-brew install postgresql
+for x in gcc rlwrap wget vim gnupg \
+         python python3 leiningen node \
+         trash hub heroku-toolbelt planck; do
+    brew install $x
+done
 
-brew cask install betterzipql
-brew cask install google-chrome
-brew cask install dropbox
-brew cask install bartender
-brew cask install spotify
-brew cask install iterm2
-brew cask install soundflower
-brew cask install transmission
-brew cask install flux
-brew cask install geotag
-brew cask install mplayerx
+brew install caskroom/cask/brew-cask
 
-brew tap caskroom/versions
-brew cask install lightroom3
+brew cask install seil
 
 
-# wrap git
+# Install remaining apps (eg spotify) with install-apps script
+
+
+# wrap git for the rest of this script
 eval "$(hub alias -s)"
 
 
-# create Go path referred to in .bash_profile
-mkdir ~/go
+# Remap Caps Lock to Escape
+/Applications/Seil.app/Contents/Library/bin/seil set keycode_capslock 53
 
 
 ### Setup Vim plugins
 
-# Pathogen
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+vim_setup() {
 
-# Everything else
-cd ~/.vim/bundle
-git clone othree/html5.vim
-git clone hail2u/vim-css3-syntax
-git clone kchmck/vim-coffee-script
-git clone digitaltoad/vim-jade
-git clone elzr/vim-json
-git clone plasticboy/vim-markdown
-git clone guns/vim-clojure-static
-git clone fatih/vim-go
-git clone rust-lang/rust.vim
+    # Pathogen
+    mkdir -p ~/.vim/autoload ~/.vim/bundle
+    curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
-git clone tpope/vim-repeat
-git clone tpope/vim-surround
-git clone bling/vim-airline
+    # Everything else
+    cd ~/.vim/bundle
+    git clone othree/html5.vim
+    git clone hail2u/vim-css3-syntax
+    git clone kchmck/vim-coffee-script
+    git clone digitaltoad/vim-jade
+    git clone elzr/vim-json
+    git clone plasticboy/vim-markdown
+    git clone guns/vim-clojure-static
+    git clone fatih/vim-go
+    git clone rust-lang/rust.vim
+
+    git clone tpope/vim-repeat
+    git clone tpope/vim-surround
+    git clone bling/vim-airline
+
+}
+vim_setup
 
 
 ### Python
 
-sudo easy_install pip
-sudo -H pip install virtualenv requests
+echo 'Sudo required to ensure proper ownership on python library location'
+sudo chown -R $(basename ~):admin /usr/local/lib/python2.7
+pip install virtualenv requests
 
 
 ### TrueCrypt
