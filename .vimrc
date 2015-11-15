@@ -54,17 +54,22 @@ set nofoldenable
 
 set mouse=a       " use mouse scrolling!
 
+
+""" NORMAL mode  =======================
+
 nnoremap ; :
 
-" hit Return to clear search highlighting
+" <return> = clear search highlighting
 nnoremap <CR> :noh<CR>
 
-" shift-up = delete from previous char up to end of prev line
-" nnoremap <s-up> hvk$c<space><esc>+
+" shift-up = shift this line, starting at cursor, up to end of prev line, then
+"            bring cursor to start of next line
 nnoremap <silent> <Plug>DeleteUntilEndAbove hvk$c<space><esc>+
             \:call repeat#set("\<Plug>DeleteUntilEndAbove")<CR>
 nmap <s-up> <Plug>DeleteUntilEndAbove
 
+
+""" VISUAL mode  =======================
 
 " Go to next line after leaving visual mode
 xnoremap <esc> <esc>j
@@ -73,6 +78,13 @@ xnoremap <esc> <esc>j
 xnoremap > >gv
 xnoremap < <gv
 
+
+""" COMMAND mode  ======================
+
+" use w!! to sudo-write after opening
+cmap w!! w !sudo tee % >/dev/null
+
+
 "let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#default#layout = [
@@ -80,20 +92,10 @@ let g:airline#extensions#default#layout = [
     \ [ 'z' ]
     \ ]
 
-" use CSS syntax on LESS files
 autocmd BufNewFile,BufRead *.less set filetype=css
-
-autocmd BufNewFile,BufRead *.cljs.hl set filetype=clojure
-autocmd BufNewFile,BufRead *.cljs set filetype=clojure
-
 autocmd BufNewFile,BufRead *.es6 set filetype=javascript
+autocmd BufNewFile,BufRead *.cljs,*.cljs.hl set filetype=clojure
 
-" Optimize for typing colons in python and clojure
-autocmd BufNewFile,BufRead *.clj inoremap ; :
-autocmd BufNewFile,BufRead *.clj inoremap : ;
-autocmd BufNewFile,BufRead *.py inoremap ; :
-autocmd BufNewFile,BufRead *.py inoremap : ;
-
-" use w!! to sudo-write after opening
-cmap w!! w !sudo tee % >/dev/null
-
+" Optimize for typing colons in relevant languages
+autocmd FileType clojure,python,json inoremap <buffer> ; :
+autocmd FileType clojure,python,json inoremap <buffer> : ;
