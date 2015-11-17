@@ -60,6 +60,7 @@ alias gl='git lg'
 alias grem='git remote -v'
 alias gb='git branch -av'
 alias gbl='git branch -v'
+alias gri='git rebase -i'
 
 getyoutubeaudio() {
   ffmpeg -i "$1" -f mp4 -vn -acodec copy "$2"
