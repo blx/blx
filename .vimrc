@@ -64,7 +64,9 @@ nnoremap <CR> :noh<CR>
 
 " shift-up = shift this line, starting at cursor, up to end of prev line, then
 "            bring cursor to start of next line
-nnoremap <silent> <Plug>DeleteUntilEndAbove hvk$c<space><esc>+
+"            AKA eat everything from here up to last non-whitespace of prev
+"            line
+nnoremap <silent> <Plug>DeleteUntilEndAbove hvk$belc<space><esc>+
             \:call repeat#set("\<Plug>DeleteUntilEndAbove")<CR>
 nmap <s-up> <Plug>DeleteUntilEndAbove
 
@@ -72,11 +74,11 @@ nmap <s-up> <Plug>DeleteUntilEndAbove
 """ VISUAL mode  =======================
 
 " Go to next line after leaving visual mode
-xnoremap <esc> <esc>j
+"xnoremap <esc> <esc>j
 
 " Reselect selection after each indent
-xnoremap > >gv
-xnoremap < <gv
+"xnoremap > >gv
+"xnoremap < <gv
 
 
 """ COMMAND mode  ======================
@@ -99,3 +101,21 @@ autocmd BufNewFile,BufRead *.cljs,*.cljs.hl set filetype=clojure
 " Optimize for typing colons in relevant languages
 autocmd FileType clojure,python,json inoremap <buffer> ; :
 autocmd FileType clojure,python,json inoremap <buffer> : ;
+
+
+" large file is >= 5 MB
+let g:LargeFile = 1024 * 1024 * 5
+augroup LargeFile
+    autocmd BufReadPre * let f=getfsize(expand("<afile>")) | if f > g:LargeFile || f == -2 | call LargeFile() | endif
+augroup END
+
+function LargeFile()
+    " syntax highlighting off
+    setlocal eventignore+=FileType
+
+    setlocal bufhidden=unload
+    setlocal buftype=nowrite
+    setlocal undolevels=5
+
+    autocmd VimEnter *  echo "File larger than " . (g:LargeFile / 1024 / 1024) . " MB; some options have been disabled."
+endfunction
