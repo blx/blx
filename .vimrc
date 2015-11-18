@@ -20,7 +20,7 @@ set shiftwidth=4  " number of spaces for indenting
 set smarttab
 set smartcase     " ignore case if search pattern is lowercase
 set hlsearch      " highlight search results
-hi Search cterm=NONE ctermfg=white ctermbg=blue
+hi Search cterm=NONE ctermfg=white ctermbg=LightBlue
 hi Visual ctermbg=LightGreen
 
 set cursorline    " underline the current line
