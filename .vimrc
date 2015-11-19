@@ -88,6 +88,8 @@ nmap <s-up> <Plug>DeleteUntilEndAbove
 
 """ VISUAL mode  =======================
 
+xnoremap ; :
+
 " Go to next line after leaving visual mode
 "xnoremap <esc> <esc>j
 
@@ -118,6 +120,12 @@ autocmd BufNewFile,BufRead *.cljs,*.cljs.hl set filetype=clojure
 " Optimize for typing colons in relevant languages
 autocmd FileType clojure,python,json,vim inoremap <buffer> ; :
 autocmd FileType clojure,python,json,vim inoremap <buffer> : ;
+
+
+function! FormatJSON()
+    :'<,'>!python -m json.tool
+endfunction
+command! -range FormatJSON call FormatJSON()
 
 
 " large file is >= 5 MB
