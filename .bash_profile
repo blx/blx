@@ -21,6 +21,10 @@ alias startpg='postgres -D /usr/local/var/postgres'
 # Use GNU rm(1) and prompt before rm'ing > 3 files or recursively
 alias rm='grm -I'
 
+if type trash &>/dev/null; then
+    alias d='trash'
+fi
+
 alias fuck='sudo $(history -p \!\!)'
 
 alias stripexif='exiftool -all= -overwrite_original'
