@@ -109,5 +109,6 @@ pip install virtualenv requests
 ### TrueCrypt
 
 wget https://www.grc.com/misc/truecrypt/TrueCrypt%207.1a%20Mac%20OS%20X.dmg
-echo '16e6d7675d63fba9bb75a9983397e3fb610459a1  TrueCrypt 7.1a Mac OS X.dmg' | shasum --check
-open 'TrueCrypt 7.1a Mac OS X.dmg'
+echo '16e6d7675d63fba9bb75a9983397e3fb610459a1  TrueCrypt 7.1a Mac OS X.dmg' \
+    | shasum --check \
+    && open 'TrueCrypt 7.1a Mac OS X.dmg'
