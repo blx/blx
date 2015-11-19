@@ -106,13 +106,15 @@ let g:airline#extensions#default#layout = [
     \ [ 'z' ]
     \ ]
 
+let g:CommandTFileScanner = "git"
+
 autocmd BufNewFile,BufRead *.less set filetype=css
 autocmd BufNewFile,BufRead *.es6 set filetype=javascript
 autocmd BufNewFile,BufRead *.cljs,*.cljs.hl set filetype=clojure
 
 " Optimize for typing colons in relevant languages
-autocmd FileType clojure,python,json inoremap <buffer> ; :
-autocmd FileType clojure,python,json inoremap <buffer> : ;
+autocmd FileType clojure,python,json,vim inoremap <buffer> ; :
+autocmd FileType clojure,python,json,vim inoremap <buffer> : ;
 
 
 " large file is >= 5 MB
