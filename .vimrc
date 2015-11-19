@@ -70,6 +70,10 @@ map ? <Plug>(incsearch-backward)
 " Find files quickly
 nnoremap <silent> <Leader>t :CommandT<CR>
 nnoremap <silent> <Leader>b :CommandTBuffer<CR>
+"
+" Forward/back through buffers
+nnoremap <Leader>f :bn<CR>
+nnoremap <Leader>d :bp<CR>
 
 " <return> = clear search highlighting
 nnoremap <CR> :noh<CR>
