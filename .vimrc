@@ -74,6 +74,9 @@ nnoremap <silent> <Leader>b :CommandTBuffer<CR>
 " <return> = clear search highlighting
 nnoremap <CR> :noh<CR>
 
+" ctrl-a = select all
+nnoremap <c-a> ggVG
+
 " shift-up = shift this line, starting at cursor, up to end of prev line, then
 "            bring cursor to start of next line
 "            AKA eat everything from here up to last non-whitespace of prev
