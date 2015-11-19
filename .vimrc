@@ -7,6 +7,8 @@ syntax on
 
 set synmaxcol=900 " don't try to highlight long lines
 
+let mapleader=" "
+
 set hidden
 set autoread
 set nowrap
@@ -14,12 +16,14 @@ set expandtab
 set tabstop=4
 set autoindent
 set pastetoggle=<F2>
-set timeoutlen=60
+set timeoutlen=200
+set ttimeoutlen=100
 set number        " show line numbers
 set shiftwidth=4  " number of spaces for indenting
 set smarttab
 set smartcase     " ignore case if search pattern is lowercase
 set hlsearch      " highlight search results
+set incsearch
 hi Search cterm=NONE ctermfg=white ctermbg=LightBlue
 hi Visual ctermbg=LightGreen
 
@@ -59,6 +63,14 @@ set mouse=a       " use mouse scrolling!
 
 nnoremap ; :
 
+" Highlight search results as we type
+map / <Plug>(incsearch-forward)
+map ? <Plug>(incsearch-backward)
+
+" Find files quickly
+nnoremap <silent> <Leader>t :CommandT<CR>
+nnoremap <silent> <Leader>b :CommandTBuffer<CR>
+
 " <return> = clear search highlighting
 nnoremap <CR> :noh<CR>
 
@@ -66,7 +78,7 @@ nnoremap <CR> :noh<CR>
 "            bring cursor to start of next line
 "            AKA eat everything from here up to last non-whitespace of prev
 "            line
-nnoremap <silent> <Plug>DeleteUntilEndAbove hvk$belc<space><esc>+
+nnoremap <silent> <Plug>DeleteUntilEndAbove hvkg_lc<space><esc>+
             \:call repeat#set("\<Plug>DeleteUntilEndAbove")<CR>
 nmap <s-up> <Plug>DeleteUntilEndAbove
 

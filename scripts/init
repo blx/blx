@@ -81,12 +81,19 @@ vim_setup() {
     git clone elzr/vim-json
     git clone plasticboy/vim-markdown
     git clone guns/vim-clojure-static
+    git clone tpope/vim-fireplace
     git clone fatih/vim-go
     git clone rust-lang/rust.vim
 
     git clone tpope/vim-repeat
     git clone tpope/vim-surround
     git clone bling/vim-airline
+    git clone haya14busa/incsearch.vim
+
+    git clone wincent/command-t
+    cd command-t/ruby/command-t
+    ruby extconf.rb
+    make
 
 }
 vim_setup
