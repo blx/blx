@@ -63,6 +63,10 @@ set mouse=a       " use mouse scrolling!
 
 nnoremap ; :
 
+" Move up/down by visual line, not logical line (relevant when setwrap is on)
+map j gj
+map k gk
+
 " Highlight search results as we type
 map / <Plug>(incsearch-forward)
 map ? <Plug>(incsearch-backward)
