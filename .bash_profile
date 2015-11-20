@@ -14,6 +14,8 @@ alias vi='vim'
 alias python='python2'
 alias py='python2'
 
+alias c='lein repl'
+
 alias ping1='ping -c 1'
 
 alias startpg='postgres -D /usr/local/var/postgres'

@@ -17,6 +17,10 @@ Icon
 *.so
 *.pyc
 
+# clojure
+.lein-*
+.nrepl-port
+
 # vim
 *.swp
 *.swo
