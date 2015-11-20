@@ -64,8 +64,14 @@ set mouse=a       " use mouse scrolling!
 nnoremap ; :
 
 " Move up/down by visual line, not logical line (relevant when setwrap is on)
-map j gj
-map k gk
+nmap j gj
+nmap k gk
+
+" Easier split-window navigation
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+nnoremap <c-h> <c-w>h
 
 " Highlight search results as we type
 map / <Plug>(incsearch-forward)
