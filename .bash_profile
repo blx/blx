@@ -14,6 +14,8 @@ alias vi='vim'
 alias python='python2'
 alias py='python2'
 
+export PYTHONSTARTUP='python_repl.py'
+
 alias c='lein repl'
 
 alias ping1='ping -c 1'
