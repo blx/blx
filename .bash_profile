@@ -51,7 +51,7 @@ export GOPATH=$HOME/go
 # Wrap git
 eval "$(hub alias -s)"
 
-alias runsight='cd ~/sight; source sightenv/bin/activate; cd app;  sass --watch sight/assets:sight/static/css & python runserver.py;'
+alias runsight='cd ~/projects/itunes-sight; source sightenv/bin/activate; cd app; sass --watch sight/assets:sight/static/css & python runserver.py';
 
 # laziness: maximum.
 alias g='git status'
