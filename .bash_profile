@@ -25,7 +25,7 @@ alias startpg='postgres -D /usr/local/var/postgres'
 # Use GNU rm(1) and prompt before rm'ing > 3 files or recursively
 alias rm='grm -I'
 
-alias d='trash'
+alias xx='trash'
 
 alias fuck='sudo $(history -p \!\!)'
 
