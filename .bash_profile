@@ -6,6 +6,8 @@ alias ls='ls -AFG'
 # -long -human suffixes -G colours -T complete time info
 alias ll='ls -lhGT'
 
+alias cd.='cd ..'
+
 # Point vi to vim, which points to homebrew vim
 # to allow copy/paste support
 alias vi='vim'
