@@ -18,6 +18,8 @@ export PYTHONSTARTUP='python_repl.py'
 
 alias c='lein repl'
 
+alias ocaml='rlwrap ocaml'
+
 alias ping1='ping -c 1'
 
 alias startpg='postgres -D /usr/local/var/postgres'
