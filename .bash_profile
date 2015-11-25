@@ -16,7 +16,7 @@ alias vi='vim'
 alias python='python2'
 alias py='python2'
 
-export PYTHONSTARTUP='python_repl.py'
+export PYTHONSTARTUP='.pystartup.py'
 
 alias c='lein repl'
 
