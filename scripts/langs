@@ -8,6 +8,7 @@ go version
 ghc --version
 java -version | head -n 1
 lein --version
+lua -v
 echo "node $(node --version)"
 ocaml -version
 perl --version | head -n 2 | tail -n 1
