@@ -14,6 +14,6 @@ perl --version | head -n 2 | tail -n 1
 php --version | head -n 1
 python --version
 python3 --version
-R --version | head -n 1
+r --version | head -n 1
 ruby --version
 rustc --version
