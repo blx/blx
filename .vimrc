@@ -118,6 +118,8 @@ xnoremap ; :
 cmap w!! w !sudo tee % >/dev/null
 
 
+
+
 "let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#default#layout = [
@@ -127,34 +129,40 @@ let g:airline#extensions#default#layout = [
 
 let g:CommandTFileScanner = "git"
 
-autocmd BufNewFile,BufRead *.less set filetype=css
-autocmd BufNewFile,BufRead *.es6 set filetype=javascript
-autocmd BufNewFile,BufRead *.cljs,*.cljs.hl set filetype=clojure
-
-" Optimize for typing colons in relevant languages
-autocmd FileType clojure,python,json,vim inoremap <buffer> ; :
-autocmd FileType clojure,python,json,vim inoremap <buffer> : ;
 
 
-function! FormatJSON()
-    :'<,'>!python -m json.tool
-endfunction
-command! -range FormatJSON call FormatJSON()
+if has("autocmd")
+    autocmd BufNewFile,BufRead *.less set filetype=css
+    autocmd BufNewFile,BufRead *.es6 set filetype=javascript
+    autocmd BufNewFile,BufRead *.cljs,*.cljs.hl set filetype=clojure
+
+    " Optimize for typing colons in relevant languages
+    autocmd FileType clojure,python,json,vim inoremap <buffer> ; :
+    autocmd FileType clojure,python,json,vim inoremap <buffer> : ;
 
 
-" large file is >= 5 MB
-let g:LargeFile = 1024 * 1024 * 5
-augroup LargeFile
-    autocmd BufReadPre * let f=getfsize(expand("<afile>")) | if f > g:LargeFile || f == -2 | call LargeFile() | endif
-augroup END
+    " large file is >= 5 MB
+    let g:LargeFile = 1024 * 1024 * 5
+    augroup LargeFile
+        autocmd BufReadPre * let f=getfsize(expand("<afile>")) | if f > g:LargeFile || f == -2 | call LargeFile() | endif
+    augroup END
 
-function LargeFile()
-    " syntax highlighting off
-    setlocal eventignore+=FileType
+    function LargeFile()
+        " syntax highlighting off
+        setlocal eventignore+=FileType
 
-    setlocal bufhidden=unload
-    setlocal buftype=nowrite
-    setlocal undolevels=5
+        setlocal bufhidden=unload
+        setlocal buftype=nowrite
+        setlocal undolevels=5
 
-    autocmd VimEnter *  echo "File larger than " . (g:LargeFile / 1024 / 1024) . " MB; some options have been disabled."
-endfunction
+        autocmd VimEnter *  echo "File larger than " . (g:LargeFile / 1024 / 1024) . " MB; some options have been disabled."
+    endfunction
+endif
+
+
+if executable("python")
+    function! FormatJSON()
+        :'<,'>!python -m json.tool
+    endfunction
+    command! -range FormatJSON call FormatJSON()
+endif
