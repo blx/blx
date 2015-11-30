@@ -140,6 +140,8 @@ if has("autocmd")
     autocmd FileType clojure,python,json,vim inoremap <buffer> ; :
     autocmd FileType clojure,python,json,vim inoremap <buffer> : ;
 
+    autocmd FileType markdown setlocal wrap
+
 
     " large file is >= 5 MB
     let g:LargeFile = 1024 * 1024 * 5
