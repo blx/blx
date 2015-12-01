@@ -37,7 +37,7 @@ alias stripexif='exiftool -all= -overwrite_original'
 
 alias brewup='brew update && brew upgrade && brew cleanup'
 
-alias serve='python2 -m SimpleHTTPServer'
+alias serve='~/scripts/serve'
 
 export PS1="\u@\h \W\$ "
 
