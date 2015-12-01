@@ -75,6 +75,15 @@ alias gb='git branch -av'
 alias gbl='git branch -v'
 alias gri='git rebase -i'
 
+vimup() {
+    for d in $(ls -d ~/.vim/bundle/*); do
+        if [ -d "${d}/.git" ]; then
+            git -C "$d" fetch
+            git -C "$d" pull
+        fi
+    done
+}
+
 getyoutubeaudio() {
   ffmpeg -i "$1" -f mp4 -vn -acodec copy "$2"
 }
