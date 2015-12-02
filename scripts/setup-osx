@@ -99,6 +99,12 @@ vim_setup() {
 vim_setup
 
 
+### Git autocompletion
+wget -O ~/.git-completion https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+chmod +x ~/.git-completion
+
+
+
 ### Python
 
 echo 'Sudo required to ensure proper ownership on python library location'
