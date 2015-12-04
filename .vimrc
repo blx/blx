@@ -80,7 +80,7 @@ map ? <Plug>(incsearch-backward)
 " Find files quickly
 nnoremap <silent> <Leader>t :CommandT<CR>
 nnoremap <silent> <Leader>b :CommandTBuffer<CR>
-"
+
 " Forward/back through buffers
 nnoremap <Leader>f :bn<CR>
 nnoremap <Leader>d :bp<CR>
@@ -127,7 +127,11 @@ let g:airline#extensions#default#layout = [
     \ [ 'z' ]
     \ ]
 
-let g:CommandTFileScanner = "git"
+" let g:CommandTFileScanner = "git"
+" Include .gitignored files for now because since ~/.git has 'ignore *',
+" we can't find anything under ~ unless it's either in the ~/.git repo OR
+" in its own repo.
+let g:CommandTFileScanner = "find"
 
 
 
