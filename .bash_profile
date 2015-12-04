@@ -61,8 +61,8 @@ alias runsight='cd ~/projects/itunes-sight; source sightenv/bin/activate; cd app
 alias g='git status'
 alias gc='git checkout'
 alias gd='git diff'
-alias gt='git commit -m'
-alias gat='git commit -am'
+#alias gt='git commit -m'
+#alias gat='git commit -am'
 alias gam='git commit --amend'
 alias ga='git add'
 alias gap='git add --patch'
@@ -74,6 +74,22 @@ alias grem='git remote -v'
 alias gb='git branch -av'
 alias gbl='git branch -v'
 alias gri='git rebase -i'
+
+gt() {
+    if [ $# -ge 1 ]; then
+        git commit -m "$1"
+    else
+        git commit
+    fi
+}
+gat() {
+    if [ $# -ge 1 ]; then
+        git commit -a -m "$1"
+    else
+        git commit -a
+    fi
+}
+
 
 vimup() {
     for d in $(ls -d ~/.vim/bundle/*); do
