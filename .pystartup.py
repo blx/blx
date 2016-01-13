@@ -1,3 +1,8 @@
+import itertools as it
+import operator as op
+from functools import partial
+p = partial
+
 def doc(fn):
     """doc(fn)
     
