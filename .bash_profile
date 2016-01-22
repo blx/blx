@@ -70,7 +70,6 @@ alias gf='git fetch'
 alias gp='git push'
 alias gpl='git pull'
 alias gl='git lg'
-alias grem='git remote -v'
 alias gb='git branch -av'
 alias gbl='git branch -v'
 alias gri='git rebase -i'
@@ -93,6 +92,13 @@ g() {
     branch=$(git branch | sed -En 's/\* (.+)/\1/p')
     echo "[${branch}]"
     git status -s
+}
+grem() {
+    if [ $# -ge 1 ]; then
+        git remote "$@"
+    else
+        git remote -v
+    fi
 }
 
 
