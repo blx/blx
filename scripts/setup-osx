@@ -8,6 +8,8 @@ set -e
 
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
+defaults -CurrentHost write com.apple.ImageCapture disableHotPlug -bool YES
+
 ## Disable Caps Lock in preparation for installing Seil (which will remap it to Esc)
 #  (https://apple.stackexchange.com/a/88096)
 #  First, ugly script to get our keyboard's VendorID and ProductID:
