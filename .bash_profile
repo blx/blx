@@ -73,6 +73,7 @@ alias gl='git lg'
 alias gb='git branch -av'
 alias gbl='git branch -v'
 alias gri='git rebase -i'
+alias gmer='git merge'
 
 gt() {
     if [ $# -ge 1 ]; then
