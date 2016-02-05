@@ -10,6 +10,16 @@ from pprint import pprint
 from functools import partial
 p = partial
 
+# Autocompletion
+try:
+    import readline
+except ImportError:
+    print('Warning: module `readline` not available')
+else:
+    import rlcompleter
+    readline.parse_and_bind('tab: complete')
+    del readline, rlcompleter
+
 try:
     import requests as rq
 except ImportError:
