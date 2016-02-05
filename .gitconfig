@@ -1,14 +1,14 @@
-[user]
-    name = Ben Cook
-    email = b@bencook.ca
-[core]
-    editor = vi
-    excludesfile = /Users/ben/.gitignore-global
 [alias]
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
-[push]
-    default = simple
+[core]
+    editor = vi
+    excludesfile = ~/.gitignore-global
 [filter "lfs"]
     clean = git-lfs clean %f
     smudge = git-lfs smudge %f
     required = true
+[push]
+    default = simple
+[user]
+    name = Ben Cook
+    email = b@bencook.ca
