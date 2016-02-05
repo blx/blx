@@ -3,6 +3,7 @@
 # -F symbols dir/, exec*, ln@
 # -G colours
 alias ls='ls -AFG'
+alias l='ls'
 # -long -human suffixes -G colours -T complete time info
 alias ll='ls -lhGT'
 
