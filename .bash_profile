@@ -133,6 +133,9 @@ llf() {
 
 export PATH=/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin
 
+export HISTSIZE=5000
+export HISTFILESIZE=10000
+
 
 if [ -e ".git-completion" ]; then
     source .git-completion
