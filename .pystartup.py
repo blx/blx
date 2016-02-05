@@ -10,6 +10,11 @@ from pprint import pprint
 from functools import partial
 p = partial
 
+try:
+    import requests as rq
+except ImportError:
+    pass
+
 def doc(fn):
     """doc(fn)
     
