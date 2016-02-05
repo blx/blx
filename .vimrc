@@ -103,6 +103,12 @@ nnoremap <silent> <Plug>DeleteUntilEndAbove hvkg_lc<space><esc>+
 nmap <s-up> <Plug>DeleteUntilEndAbove
 
 
+""" INSERT mode  ======================
+
+inoremap ; :
+inoremap : ;
+
+
 """ VISUAL mode  =======================
 
 xnoremap ; :
@@ -130,11 +136,11 @@ let g:airline#extensions#default#layout = [
     \ [ 'z' ]
     \ ]
 
-" let g:CommandTFileScanner = "git"
+let g:CommandTFileScanner = "git"
 " Include .gitignored files for now because since ~/.git has 'ignore *',
 " we can't find anything under ~ unless it's either in the ~/.git repo OR
 " in its own repo.
-let g:CommandTFileScanner = "find"
+" let g:CommandTFileScanner = "find"
 
 
 
@@ -144,10 +150,13 @@ if has("autocmd")
     autocmd BufNewFile,BufRead *.cljs,*.cljs.hl set filetype=clojure
 
     " Optimize for typing colons in relevant languages
-    autocmd FileType clojure,python,json,vim inoremap <buffer> ; :
-    autocmd FileType clojure,python,json,vim inoremap <buffer> : ;
+"    autocmd FileType clojure,python,json,vim inoremap <buffer> ; :
+"    autocmd FileType clojure,python,json,vim inoremap <buffer> : ;
 
-    autocmd FileType markdown setlocal wrap
+    autocmd FileType java,c iunmap ;
+
+    autocmd FileType markdown,html.handlebars,html setlocal wrap
+    autocmd FileType markdown,html.handlebars setlocal colorcolumn=0
 
 
     " large file is >= 5 MB
