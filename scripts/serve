@@ -1,5 +1,8 @@
 #!/usr/bin/env python2
 
+"""Starts a static file server at localhost:8000, or other port passed as
+command-line arg, rooted in the current directory."""
+
 if __name__ == '__main__':
     import SimpleHTTPServer
     m = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map
