@@ -58,6 +58,9 @@ set nofoldenable
 
 set mouse=a       " use mouse scrolling!
 
+" fzf fuzzy finder
+set rtp+=~/.fzf
+
 
 """ NORMAL mode  =======================
 
