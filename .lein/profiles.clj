@@ -1,1 +1,1 @@
-{:user {:plugins [[lein-exec "0.3.5"]]}}
+{:user {:plugins [[lein-exec "0.3.6"]]}}
