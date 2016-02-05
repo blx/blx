@@ -11,8 +11,7 @@
 alias ga='git add'
 alias gam='git commit --amend'
 alias gap='git add --patch'
-alias gb='git branch -av'
-# read: git-branch-local
+# read: git-branch-local (git-branch-all is `gb` below)
 alias gbl='git branch -v'
 alias gc='git checkout'
 alias gd='git diff'
@@ -33,6 +32,15 @@ g() {
     branch=$(git branch | sed -En 's/\* (.+)/\1/p')
     echo "[${branch}]"
     git status -s
+}
+
+# BRANCH
+gb() {
+    if [ $# -ge 1 ]; then
+        git branch "$@"
+    else
+        git branch -av
+    fi
 }
 
 # COMMIT
