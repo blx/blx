@@ -114,6 +114,11 @@ vimup() {
     done
 }
 
+grepuniq() {
+    # eg. ggrep -oh '{{message\.[^}]\+}}' *.hbs | sort | uniq
+    ggrep -oh $1 "$2" | sort | uniq
+}
+
 getyoutubeaudio() {
   ffmpeg -i "$1" -f mp4 -vn -acodec copy "$2"
 }
