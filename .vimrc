@@ -159,8 +159,7 @@ if has("autocmd")
     autocmd FileType markdown,html.handlebars setlocal colorcolumn=0
 
 
-    " large file is >= 5 MB
-    let g:LargeFile = 1024 * 1024 * 5
+    let g:LargeFile = 1024 * 1024 * 2
     augroup LargeFile
         autocmd BufReadPre * let f=getfsize(expand("<afile>")) | if f > g:LargeFile || f == -2 | call LargeFile() | endif
     augroup END
@@ -170,8 +169,7 @@ if has("autocmd")
         setlocal eventignore+=FileType
 
         setlocal bufhidden=unload
-        setlocal buftype=nowrite
-        setlocal undolevels=5
+        setlocal undolevels=10
 
         autocmd VimEnter *  echo "File larger than " . (g:LargeFile / 1024 / 1024) . " MB; some options have been disabled."
     endfunction
