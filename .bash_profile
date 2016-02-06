@@ -43,7 +43,7 @@ vimup() {
 
 grepuniq() {
     # eg. ggrep -oh '{{message\.[^}]\+}}' *.hbs | sort | uniq
-    ggrep -oh "$1" "${@:2}" | sort | uniq
+    ggrep --only-matching --no-filename "$1" "${@:2}" | sort | uniq
 }
 
 getyoutubeaudio() {
