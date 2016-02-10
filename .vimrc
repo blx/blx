@@ -153,7 +153,7 @@ if has("autocmd")
 "    autocmd FileType clojure,python,json,vim inoremap <buffer> ; :
 "    autocmd FileType clojure,python,json,vim inoremap <buffer> : ;
 
-    autocmd FileType java,c iunmap ;
+    autocmd FileType java,c,javascript iunmap ;
 
     autocmd FileType markdown,html.handlebars,html setlocal wrap
     autocmd FileType markdown,html.handlebars setlocal colorcolumn=0
