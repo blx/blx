@@ -36,5 +36,8 @@ alias stripexif='exiftool -all= -overwrite_original'
 # (Port number can also be passed in, eg. `serve 9001`)
 alias serve='~/scripts/serve'
 
+# Recursively remove all .pyc in this dir and subdirs
+alias pyclean='find . -name "*.pyc" -exec rm -f {} \;'
+
 #alias runsight='cd ~/projects/itunes-sight; source sightenv/bin/activate; cd app; sass --watch sight/assets:sight/static/css & python runserver.py';
 
