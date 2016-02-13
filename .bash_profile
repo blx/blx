@@ -31,6 +31,10 @@ export PYTHONSTARTUP="${HOME}/.pystartup.py"
 # Golang
 export GOPATH=$HOME/go
 
+recents() {
+    # descending frequency count of first words of bash history
+    cut -d' ' -f1 ~/.bash_history | sort | uniq -c | sort -r
+}
 
 vimup() {
     for d in $(ls -d ~/.vim/bundle/*); do
