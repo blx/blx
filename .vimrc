@@ -49,6 +49,8 @@ set wildmenu
 set wildmode=list:longest
 set wildignore=*.pyc
 set wildignore+=*DS_Store*
+set wildignore+=*.png,*.jpg,*.jpeg,*.ico,*.gif
+set wildignore+=*.ttf,*.woff
 
 set clipboard=unnamed
 
