@@ -15,7 +15,7 @@ p = partial
 try:
     import readline
 except ImportError:
-    print('Warning: module `readline` not available')
+    print('Warning: module `readline` not available. Tab autocomplete disabled.')
 else:
     import rlcompleter
     readline.parse_and_bind('tab: complete')
