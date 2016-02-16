@@ -54,5 +54,6 @@ def slurp(f):
         return f.read()
 
 def spit(f, txt):
-    with open(f, 'w'):
+    """spit(f, txt): Writes `txt` to file at `f`"""
+    with open(f, 'w') as f:
         f.write(txt)
