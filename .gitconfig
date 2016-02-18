@@ -1,6 +1,7 @@
 [alias]
     chp = cherry-pick
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+    rb = rebase
 [core]
     editor = vi
     excludesfile = ~/.gitignore-global
