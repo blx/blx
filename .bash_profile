@@ -64,3 +64,7 @@ export PATH=/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$G
 if [ -e ".git-completion" ]; then
     source .git-completion
 fi
+
+if [ -e ".bash_blx" ]; then
+    source .bash_blx
+fi
