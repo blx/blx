@@ -22,6 +22,9 @@ alias xx='trash'
 # Use GNU rm(1) and prompt before rm'ing > 3 files or recursively
 alias rm='grm -I'
 
+# Find stuff
+alias ff='ggrep --recursive --line-number --color'
+
 # Repeat previous command using `sudo`
 alias fuck='sudo $(history -p \!\!)'
 
