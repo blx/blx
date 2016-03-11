@@ -13,6 +13,8 @@ alias l='ls'
 alias ll='ls -lhGT'
 
 alias cd.='cd ..'
+alias cd..='cd ../..'
+alias cd...='cd ../../..'
 
 # Delete to Trash instead of using `rm`
 alias xx='trash'
