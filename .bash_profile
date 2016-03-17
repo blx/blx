@@ -1,6 +1,5 @@
 source .bashrc
 source .bash_aliases
-source .bash_git
 
 # Point vi to vim, which points to homebrew vim
 # which supports copy/paste and other stuff
@@ -64,6 +63,8 @@ export PATH=/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$G
 if [ -e ".git-completion" ]; then
     source .git-completion
 fi
+
+source .bash_git
 
 if [ -e ".bash_blx" ]; then
     source .bash_blx

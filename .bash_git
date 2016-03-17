@@ -70,3 +70,8 @@ grem() {
         git remote -v
     fi
 }
+
+
+if [[ $(type -t __git_complete) == 'function' ]]; then
+    __git_complete gc _git_checkout
+fi
