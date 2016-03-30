@@ -36,6 +36,9 @@ def identity(x): return x
 def inc(x):      return x + 1
 def dec(x):      return x - 1
 
+first  = op.itemgetter(0)
+second = op.itemgetter(1)
+
 def juxt(*fns):
     def _juxted(*a, **kw):
         return [f(*a, **kw) for f in fns]
