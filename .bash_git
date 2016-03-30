@@ -25,6 +25,7 @@ alias gp='git push'
 alias gpl='git pull'
 #alias gplv3='git fetch stallman'
 alias gri='git rebase -i'
+alias gri2='git rebase -i head~2'
 alias gst='git status'
 
 # STATUS (short)
