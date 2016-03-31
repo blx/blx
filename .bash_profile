@@ -38,7 +38,7 @@ recents() {
 vimup() {
     for d in $(ls -d ~/.vim/bundle/*); do
         if [ -d "${d}/.git" ]; then
-            git -C "$d" fetch
+            echo "Updating $d"
             git -C "$d" pull
         fi
     done
