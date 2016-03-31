@@ -61,7 +61,7 @@ set nofoldenable
 set mouse=a       " use mouse scrolling!
 
 " fzf fuzzy finder
-set rtp+=~/.fzf
+set rtp+=/usr/local/opt/fzf
 
 
 """ NORMAL mode  =======================
@@ -85,6 +85,8 @@ map ? <Plug>(incsearch-backward)
 " Find files quickly
 nnoremap <silent> <Leader>t :CommandT<CR>
 nnoremap <silent> <Leader>b :CommandTBuffer<CR>
+
+nnoremap <silent> <Leader><s-t> :FZF<CR>
 
 " Forward/back through buffers
 nnoremap <Leader>f :bn<CR>
