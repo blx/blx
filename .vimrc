@@ -189,3 +189,10 @@ if executable("python")
     endfunction
     command! -range FormatJSON call FormatJSON()
 endif
+
+if executable("xmllint")
+    function! PrettyXML()
+        :'<,'>!xmllint --format -
+    endfunction
+    command! -range PrettyXML call PrettyXML()
+endif
