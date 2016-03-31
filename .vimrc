@@ -130,6 +130,8 @@ xnoremap ; :
 " use w!! to sudo-write after opening
 cmap w!! w !sudo tee % >/dev/null
 
+" Remap q1 to q! for when <shift> gets missed in a hurry
+cnoreabbrev <expr> q1 getcmdtype() == ":" && getcmdline() == 'q1' ? 'q!' : 'q1'
 
 
 
