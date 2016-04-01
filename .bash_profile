@@ -73,19 +73,18 @@ getyoutubeaudio() {
   ffmpeg -i "$1" -f mp4 -vn -acodec copy "$2"
 }
 
-llf() {
-    ll | grep "$@"
-}
-
 export PATH=/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin
 
 
-if [ -e ".git-completion" ]; then
+if [ -e .git-completion ]; then
     source .git-completion
 fi
 
-source .bash_git
+if [ -e .bash_git ]; then
+    # Depends on git-completion for full functionality
+    source .bash_git
+fi
 
-if [ -e ".bash_blx" ]; then
+if [ -e .bash_blx ]; then
     source .bash_blx
 fi
