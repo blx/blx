@@ -2,6 +2,8 @@
     chp = cherry-pick
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
     rb = rebase
+    ss = stash
+    sp = stash pop
 [core]
     editor = vi
     excludesfile = ~/.gitignore-global
