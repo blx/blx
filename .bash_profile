@@ -19,8 +19,26 @@ export SUDO_PS1="\[\e[33;97;41m\][\u@\h] \w#\[\e[0m\] "
 
 export EDITOR='vim'
 
+
+## History
+
+# Number of lines stored in memory during session
 export HISTSIZE=5000
+
+# Number of lines kept in file
 export HISTFILESIZE=10000
+
+shopt -s histappend
+
+__managehistlen() {
+    # Archive current histfile and start a new one if too long
+    if [ -e "$HISTFILE" ] && [ $(wc -l "$HISTFILE" | awk '{print $1}') -ge $HISTFILESIZE ]; then
+        cp "$HISTFILE" "${HISTFILE}-$(date '+%Y%m%dT%H%M%S%z')"
+        : > "$HISTFILE"
+    fi
+}
+__managehistlen
+
 
 # expand aliases into sudo
 alias sudo='sudo '
@@ -32,7 +50,9 @@ export GOPATH=$HOME/go
 
 recents() {
     # descending frequency count of first words of bash history
-    cut -d' ' -f1 ~/.bash_history | sort | uniq -c | sort -r
+    # (or provided alternate history file)
+    f=${1:-$HISTFILE}
+    cut -d' ' -f1 "$f" | sort | uniq -c | sort -r
 }
 
 vimup() {
