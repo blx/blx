@@ -3,10 +3,17 @@
 """Starts a static file server at localhost:8000, or other port passed as
 command-line arg, rooted in the current directory."""
 
+from SimpleHTTPServer import SimpleHTTPRequestHandler
+import BaseHTTPServer
+
+class CORSRequestHandler(SimpleHTTPRequestHandler):
+    def end_headers(self):
+        self.send_header('Access-Control-Allow-Origin', '*')
+        SimpleHTTPRequestHandler.end_headers(self)
+
 if __name__ == '__main__':
-    import SimpleHTTPServer
-    m = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map
+    m = CORSRequestHandler.extensions_map
     m[''] = 'text/plain'
     m.update({k: v + ';charset=UTF-8'
               for k, v in m.iteritems()})
-    SimpleHTTPServer.test()
+    BaseHTTPServer.test(CORSRequestHandler, BaseHTTPServer.HTTPServer)
