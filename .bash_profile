@@ -1,5 +1,5 @@
-source .bashrc
-source .bash_aliases
+source "${HOME}/.bashrc"
+source "${HOME}/.bash_aliases"
 
 # Point vi to vim, which points to homebrew vim
 # which supports copy/paste and other stuff
@@ -76,15 +76,15 @@ getyoutubeaudio() {
 export PATH=/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin
 
 
-if [ -e .git-completion ]; then
-    source .git-completion
+if [ -e "${HOME}/.git-completion" ]; then
+    source "${HOME}/.git-completion"
 fi
 
-if [ -e .bash_git ]; then
+if [ -e "${HOME}/.bash_git" ]; then
     # Depends on git-completion for full functionality
-    source .bash_git
+    source "${HOME}/.bash_git"
 fi
 
-if [ -e .bash_blx ]; then
-    source .bash_blx
+if [ -e "${HOME}/.bash_blx" ]; then
+    source "${HOME}/.bash_blx"
 fi
