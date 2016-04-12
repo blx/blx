@@ -63,6 +63,9 @@ set mouse=a       " use mouse scrolling!
 " fzf fuzzy finder
 set rtp+=/usr/local/opt/fzf
 
+let g:clojure_syntax_keywords = {
+    \ 'clojureDefine': ["defproject"]
+    \ }
 
 """ NORMAL mode  =======================
 
