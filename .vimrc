@@ -166,7 +166,8 @@ if has("autocmd")
     autocmd FileType java,c,javascript,sql,php silent! iunmap :
 
     autocmd FileType markdown,html.handlebars,html setlocal wrap
-    autocmd FileType markdown,html.handlebars setlocal colorcolumn=0
+    autocmd FileType markdown,html.handlebars,json,csv setlocal colorcolumn=0
+
 
 
     let g:LargeFile = 1024 * 1024 * 2
