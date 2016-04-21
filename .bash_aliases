@@ -16,6 +16,8 @@ alias cd.='cd ..'
 alias cd..='cd ../..'
 alias cd...='cd ../../..'
 
+alias pd='pushd'
+
 # Delete to Trash instead of using `rm`
 alias xx='trash'
 
