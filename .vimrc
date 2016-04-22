@@ -112,8 +112,8 @@ nmap <s-up> <Plug>DeleteUntilEndAbove
 
 """ INSERT mode  ======================
 
-inoremap ; :
-inoremap : ;
+" inoremap ; :
+" inoremap : ;
 
 
 """ VISUAL mode  =======================
@@ -159,11 +159,11 @@ if has("autocmd")
     autocmd BufNewFile,BufRead *.cljs,*.cljs.hl set filetype=clojure
 
     " Optimize for typing colons in relevant languages
-"    autocmd FileType clojure,python,json,vim inoremap <buffer> ; :
-"    autocmd FileType clojure,python,json,vim inoremap <buffer> : ;
+    autocmd FileType clojure,python,json,vim inoremap <buffer> ; :
+    autocmd FileType clojure,python,json,vim inoremap <buffer> : ;
 
-    autocmd FileType java,c,javascript,sql,php silent! iunmap ;
-    autocmd FileType java,c,javascript,sql,php silent! iunmap :
+"    autocmd FileType java,c,javascript,sql,php silent! <buffer> iunmap ;
+"    autocmd FileType java,c,javascript,sql,php silent! <buffer> iunmap :
 
     autocmd FileType markdown,html.handlebars,html setlocal wrap
     autocmd FileType markdown,html.handlebars,json,csv setlocal colorcolumn=0
