@@ -64,7 +64,7 @@ set mouse=a       " use mouse scrolling!
 set rtp+=/usr/local/opt/fzf
 
 let g:clojure_syntax_keywords = {
-    \ 'clojureDefine': ["defproject"]
+    \ 'clojureDefine': ["defproject", "defstate"]
     \ }
 
 """ NORMAL mode  =======================
