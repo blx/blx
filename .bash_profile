@@ -26,7 +26,7 @@ export EDITOR='vim'
 export HISTSIZE=5000
 
 # Number of lines kept in file
-export HISTFILESIZE=10000
+export HISTFILESIZE=8000
 
 shopt -s histappend
 
