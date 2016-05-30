@@ -168,6 +168,8 @@ if has("autocmd")
     autocmd FileType markdown,html.handlebars,html setlocal wrap
     autocmd FileType markdown,html.handlebars,json,csv setlocal colorcolumn=0
 
+"    autocmd QuickFixCmdPost [^l]* nested cwindow
+    autocmd QuickFixCmdPost l* nested lwindow
 
 
     let g:LargeFile = 1024 * 1024 * 2
