@@ -70,7 +70,12 @@ grepuniq() {
 }
 
 getyoutubeaudio() {
-  ffmpeg -i "$1" -f mp4 -vn -acodec copy "$2"
+    ffmpeg -i "$1" -f mp4 -vn -acodec copy "$2"
+}
+
+# Format millisecond timestamps to be readable
+hor() {
+    date -r $(($1 / 1000))
 }
 
 export PATH=/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin
