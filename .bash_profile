@@ -69,6 +69,15 @@ grepuniq() {
     ggrep --only-matching --no-filename "$1" "${@:2}" | sort | uniq
 }
 
+extensions() {
+    # frequency count of file extensions in given dir
+    find "$1" | \
+        ggrep --ignore-case --only-matching '\.[^.]*$' | \
+        sort | \
+        uniq -c | \
+        sort -rn
+}
+
 getyoutubeaudio() {
     ffmpeg -i "$1" -f mp4 -vn -acodec copy "$2"
 }
