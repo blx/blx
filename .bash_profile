@@ -71,7 +71,7 @@ grepuniq() {
 
 extensions() {
     # frequency count of file extensions in given dir
-    find "$1" | \
+    find "$1" -type f | \
         ggrep --ignore-case --only-matching '\.[^.]*$' | \
         sort | \
         uniq -c | \
