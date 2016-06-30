@@ -16,3 +16,12 @@
 [user]
     name = Ben Cook
     email = b@bencook.ca
+[color "diff"]
+    old = red bold
+[color "diff-highlight"]
+    oldNormal = red bold
+    oldHighlight = 196 bold 52
+    newNormal = 34 bold
+    newHighlight = 120 bold 22
+[diff-so-fancy]
+    stripLeadingSymbols = false
