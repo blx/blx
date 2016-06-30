@@ -19,3 +19,8 @@ for x in betterzipql google-chrome dropbox bartender1 spotify iterm2 soundflower
          transmission flux geotag mplayerx lightroom3; do
     brew cask install $x
 done
+
+for x in typescript typings grunt-cli
+    ; do
+    npm install -g $x
+done
