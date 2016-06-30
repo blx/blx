@@ -83,8 +83,12 @@ getyoutubeaudio() {
 }
 
 # Format millisecond timestamps to be readable
+# (it stands for 'horloge' u fiends)
 hor() {
+    # local time
     date -r $(($1 / 1000))
+    # UTC
+    date -r $(($1 / 1000)) -u
 }
 
 export PATH=/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin
