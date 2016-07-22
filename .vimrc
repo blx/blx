@@ -24,6 +24,7 @@ set smarttab
 set smartcase     " ignore case if search pattern is lowercase
 set hlsearch      " highlight search results
 set incsearch
+hi LineNr ctermfg=grey
 hi Search cterm=NONE ctermfg=white ctermbg=LightBlue
 hi Visual ctermbg=LightGreen
 
