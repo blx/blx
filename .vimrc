@@ -134,6 +134,8 @@ xnoremap ; :
 
 """ COMMAND mode  ======================
 
+cnoreabbrev ag Ack!
+
 " use w!! to sudo-write after opening
 cmap w!! w !sudo tee % >/dev/null
 
@@ -192,6 +194,9 @@ if has("autocmd")
     endfunction
 endif
 
+if executable("ag")
+    let g:ackprg = 'ag --vimgrep --smart-case'
+endif
 
 if executable("python")
     function! FormatJSON()
