@@ -92,6 +92,9 @@ nnoremap <silent> <Leader>b :CommandTBuffer<CR>
 
 nnoremap <silent> <Leader><s-t> :FZF<CR>
 
+" NERDTree directory tree
+nmap <Leader>a :NERDTreeToggle<CR>
+
 " Forward/back through buffers
 nnoremap <Leader>f :bn<CR>
 nnoremap <Leader>d :bp<CR>
@@ -231,3 +234,17 @@ if v:version >= 700
     autocmd BufLeave * call AutoSaveWinView()
     autocmd BufEnter * call AutoRestoreWinView()
 endif
+
+let g:NERDTreeFileExtensionHighlightFullName = 1
+
+" Close vim if the only window open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+"function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+"    exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+"    exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+"endfunction
+
+"call NERDTreeHighlightFile('json', 'green', 'none', 'yellow', '#151515')
+"call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
+"call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
