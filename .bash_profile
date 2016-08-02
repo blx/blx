@@ -28,6 +28,8 @@ export HISTSIZE=5000
 # Number of lines kept in file
 export HISTFILESIZE=8000
 
+export HISTCONTROL='ignorespace'
+
 shopt -s histappend
 
 __managehistlen() {
