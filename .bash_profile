@@ -12,7 +12,9 @@ alias py='python2'
 # Use github's wrapper around git
 eval "$(hub alias -s)"
 
-export PS1="\u@\h \W\$ "
+#export PS1="\u@\h \W\$ "
+export PS1="\[\e[38;5;33m\]\u@\h \W\$\[\e[0m\] "
+#export PS1="\[\e[48;5;33m\]\e[97m\]\u@\h \W\$\[\e[0m\] "
 
 # Red and scary
 export SUDO_PS1="\[\e[33;97;41m\][\u@\h] \w#\[\e[0m\] "
