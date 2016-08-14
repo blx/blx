@@ -79,5 +79,6 @@ if [[ $(type -t __git_complete) == 'function' ]]; then
     __git_complete gb _git_branch
     __git_complete gc _git_checkout
     __git_complete gd _git_diff
+    __git_complete gmer _git_merge
     __git_complete gp _git_push
 fi
