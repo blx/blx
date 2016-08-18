@@ -70,7 +70,7 @@ vimup() {
 
 grepuniq() {
     # eg. ggrep -oh '{{message\.[^}]\+}}' *.hbs | sort | uniq
-    ggrep --only-matching --no-filename "$1" "${@:2}" | sort | uniq
+    ggrep --only-matching --no-filename "$1" "${@:2}" | sort | uniq -c | sort -r
 }
 
 extensions() {
