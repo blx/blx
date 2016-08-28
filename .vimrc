@@ -29,7 +29,7 @@ hi Search cterm=NONE ctermfg=white ctermbg=LightBlue
 hi Visual ctermbg=LightGreen
 
 set cursorline    " underline the current line
-set colorcolumn=85
+"set colorcolumn=85
 set laststatus=2  " always show statusbar (+ enable vim-airline)
 
 set backspace=indent,eol,start
