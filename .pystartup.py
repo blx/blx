@@ -51,11 +51,15 @@ def is_zero(x):  return x == 0
 first  = op.itemgetter(0)
 second = op.itemgetter(1)
 
+try:
+    items = dict.iteritems
+except AttributeError:
+    items = dict.items
+
 def merge(*dicts):
     """Returns the dict obtained by shallowing merging the `dicts` left-to-right.
-    merge :: {}
     merge *dicts :: *{} -> {}"""
-    return dict(it.chain(*(d.iteritems() for d in dicts if d)))
+    return dict(it.chain.from_iterable(items(d) for d in dicts if d))
 
 def comp(*fns):
     if not fns:
