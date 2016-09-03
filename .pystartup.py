@@ -10,8 +10,7 @@ import operator as op
 from pprint import pprint
 from collections import namedtuple, Counter
 from functools import reduce
-from functools import partial
-p = partial
+from functools import partial as p
 
 
 ### REPL stuff
