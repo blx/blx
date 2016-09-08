@@ -46,5 +46,9 @@ alias serve='~/scripts/serve'
 # Recursively remove all .pyc in this dir and subdirs
 alias pyclean='find . -name "*.pyc" -exec rm -f {} \;'
 
+uuid() {
+    python3 -c 'import uuid; print(str(uuid.uuid4()), end="")' | pbcopy
+}
+
 #alias runsight='cd ~/projects/itunes-sight; source sightenv/bin/activate; cd app; sass --watch sight/assets:sight/static/css & python runserver.py';
 
