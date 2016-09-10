@@ -13,9 +13,6 @@
     required = true
 [push]
     default = simple
-[user]
-    name = Ben Cook
-    email = b@bencook.ca
 [color "diff"]
     old = red bold
 [color "diff-highlight"]
@@ -25,3 +22,5 @@
     newHighlight = 120 bold 22
 [diff-so-fancy]
     stripLeadingSymbols = false
+[include]
+    path = ~/.blx-private/.gitconfig
