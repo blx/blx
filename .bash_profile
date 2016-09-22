@@ -1,5 +1,9 @@
-source "${HOME}/.bashrc"
-source "${HOME}/.bash_aliases"
+if [ -e "${HOME}/.bashrc" ]; then
+    source "${HOME}/.bashrc"
+fi
+if [ -e "${HOME}/.bash_aliases" ]; then
+    source "${HOME}/.bash_aliases"
+fi
 
 # Point vi to vim, which points to homebrew vim
 # which supports copy/paste and other stuff
@@ -109,4 +113,8 @@ fi
 
 if [ -e "${HOME}/.bash_blx" ]; then
     source "${HOME}/.bash_blx"
+fi
+
+if [ -e "${HOME}/.bash_skio" ]; then
+    source "${HOME}/.bash_skio"
 fi
