@@ -44,7 +44,7 @@ rm $brew_install
 # GNU rm(1) and co
 brew install coreutils
 
-for x in gcc rlwrap wget vim gnupg \
+for x in gcc rlwrap wget git vim gnupg \
          python python3 leiningen node \
          trash hub heroku-toolbelt planck; do
     brew install $x

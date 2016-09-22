@@ -6,7 +6,7 @@ brew tap cheba/rust-nightly
 
 for x in rust-nightly jq ocaml ghc cabal-install r go \
          exiftool postgresql httpie ffmpeg youtube-dl mobile-shell
-         the_silver_searcher tmux ; do
+         the_silver_searcher tmux fzf ; do
     brew install $x
 done
 
