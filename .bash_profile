@@ -99,7 +99,7 @@ hor() {
     date -r $(($1 / 1000)) -u
 }
 
-export PATH=/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin
+export PATH=/Users/ben/.cargo/bin:/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin
 
 
 if [ -e "${HOME}/.git-completion" ]; then
