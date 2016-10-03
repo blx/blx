@@ -24,3 +24,7 @@ for x in typescript typings grunt-cli
     ; do
     npm install -g $x
 done
+
+for x in httpstat; do
+    go get $x
+done
