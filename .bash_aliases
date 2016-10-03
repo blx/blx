@@ -35,6 +35,8 @@ alias ocaml='rlwrap ocaml'
 
 alias openssl='/usr/local/opt/openssl/bin/openssl'
 
+alias hs='httpstat'
+
 alias ping1='ping -c 1'
 alias brewup='brew update && brew upgrade && brew cleanup'
 alias startpg='postgres -D /usr/local/var/postgres'
