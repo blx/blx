@@ -52,7 +52,7 @@ gt() {
     if [ $# -eq 1 ]; then
         git commit -m "$1"
     else
-        git commit
+        git commit "$@"
     fi
 }
 
@@ -61,7 +61,7 @@ gat() {
     if [ $# -eq 1 ]; then
         git commit -a -m "$1"
     else
-        git commit -a
+        git commit -a "$@"
     fi
 }
 
