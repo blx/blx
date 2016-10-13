@@ -158,6 +158,12 @@ let g:CommandTFileScanner = "git"
 " let g:CommandTFileScanner = "find"
 
 
+let g:purescript_indent_if = 2
+let g:purescript_indent_case = 2
+let g:purescript_indent_let = 2
+let g:purescript_indent_where = 2
+let g:purescript_indent_do = 2
+
 
 if has("autocmd")
     autocmd BufNewFile,BufRead *.less set filetype=css
@@ -167,6 +173,8 @@ if has("autocmd")
     " Optimize for typing colons in relevant languages
     autocmd FileType clojure,python,json,vim inoremap <buffer> ; :
     autocmd FileType clojure,python,json,vim inoremap <buffer> : ;
+
+    autocmd FileType purescript setlocal shiftwidth=2
 
 "    autocmd FileType java,c,javascript,sql,php silent! <buffer> iunmap ;
 "    autocmd FileType java,c,javascript,sql,php silent! <buffer> iunmap :
