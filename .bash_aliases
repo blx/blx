@@ -54,5 +54,9 @@ uuid() {
     python3 -c 'import uuid; print(str(uuid.uuid4()), end="")' | pbcopy
 }
 
+now() {
+    node -e 'process.stdout.write(""+ +new Date())' | pbcopy
+}
+
 #alias runsight='cd ~/projects/itunes-sight; source sightenv/bin/activate; cd app; sass --watch sight/assets:sight/static/css & python runserver.py';
 
