@@ -5,8 +5,8 @@ set -e
 brew tap cheba/rust-nightly
 
 for x in rust-nightly jq ocaml ghc cabal-install r go \
-         exiftool postgresql httpie ffmpeg youtube-dl mobile-shell
-         the_silver_searcher tmux fzf ; do
+         exiftool postgresql httpie ffmpeg youtube-dl mobile-shell graphviz
+         the_silver_searcher tmux fzf maven ; do
     brew install $x
 done
 
@@ -16,11 +16,11 @@ mkdir -p ~/go
 brew tap caskroom/versions
 
 for x in betterzipql google-chrome dropbox bartender1 spotify iterm2 soundflower \
-         transmission flux geotag mplayerx lightroom3; do
+         transmission flux geotag mplayerx lightroom3 slack; do
     brew cask install $x
 done
 
-for x in typescript typings grunt-cli
+for x in typescript@next grunt-cli bower
     ; do
     npm install -g $x
 done
@@ -28,3 +28,5 @@ done
 for x in httpstat; do
     go get $x
 done
+
+pip install aws
