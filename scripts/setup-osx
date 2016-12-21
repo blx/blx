@@ -21,7 +21,7 @@ read kb_vendorid kb_productid < \
       | paste -s -)
 
 # Now disable Caps Lock (map key 0 to action -1)
-defaults -currentHost write -g \
+defaults -currentHost write \
     com.apple.keyboard.modifiermapping.${kb_vendorid}-${kb_productid}-0 \
     -array-add $(printf '%s' '<dict>' \
                                 '<key>HIDKeyboardModifierMappingDst</key>' \
@@ -45,7 +45,7 @@ brew analytics off
 # GNU rm(1) and co
 brew install coreutils
 
-for x in gcc rlwrap wget git vim gnupg \
+for x in gcc rlwrap wget git vim gpg \
          python python3 leiningen node \
          trash hub heroku-toolbelt planck; do
     brew install $x
