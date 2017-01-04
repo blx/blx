@@ -94,6 +94,7 @@ nnoremap <silent> <Leader><s-t> :FZF<CR>
 
 " NERDTree directory tree
 nmap <Leader>a :NERDTreeToggle<CR>
+nmap <Leader>A :NERDTreeFind<CR>
 
 " Forward/back through buffers
 nnoremap <Leader>f :bn<CR>
