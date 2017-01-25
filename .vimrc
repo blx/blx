@@ -250,6 +250,7 @@ if v:version >= 700
 endif
 
 let g:NERDTreeFileExtensionHighlightFullName = 1
+let NERDTreeIgnore = ['\.pyc$']
 
 " Close vim if the only window open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
