@@ -6,6 +6,6 @@
 #   Referenced from: /Users/ben/projects/dispatch/env/lib/python2.7/site-packages/_mysql.so
 #   Reason: image not found
 
-dotso='./env/lib/python2.7/site-packages/_mysql.so'
+dotso='.env/lib/python2.7/site-packages/_mysql.so'
 
 install_name_tool -change libmysqlclient.18.dylib /usr/local/mysql/lib/libmysqlclient.18.dylib $dotso
