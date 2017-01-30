@@ -50,6 +50,9 @@ alias serve='~/scripts/serve'
 # Recursively remove all .pyc in this dir and subdirs
 alias pyclean='find . -name "*.pyc" -exec rm -f {} \;'
 
+alias mysql-start='sudo /usr/local/mysql/support-files/mysql.server start'
+alias mysql-stop='sudo /usr/local/mysql/support-files/mysql.server stop'
+
 uuid() { python3 -c 'import uuid; print(str(uuid.uuid4()), end="")' | pbcopy; }
 
 now() { node -e 'process.stdout.write(""+ +new Date())' | pbcopy; }
