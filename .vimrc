@@ -33,6 +33,7 @@ nnoremap <Leader>i :hi CursorLine cterm=NONE ctermbg=Black<cr>
 set cursorline    " underline the current line
 "set colorcolumn=85
 set laststatus=2  " always show statusbar (+ enable vim-airline)
+set ruler         " show line,col position
 
 set backspace=indent,eol,start
 
