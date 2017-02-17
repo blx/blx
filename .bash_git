@@ -21,6 +21,7 @@ alias gd.='git diff . | diff-so-fancy'
 alias gf='git fetch'
 alias gl='git lg'
 alias gL='git lg | head -n 6'
+alias gLL='git lg | head -n10'
 # note: gm is usually GraphicsMagick
 alias gmer='git merge'
 alias gp='git push'
