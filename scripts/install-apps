@@ -5,8 +5,9 @@ set -e
 brew tap cheba/rust-nightly
 
 for x in rust-nightly jq ocaml ghc cabal-install r go \
-         exiftool postgresql httpie ffmpeg youtube-dl mobile-shell graphviz
-         the_silver_searcher tmux fzf maven reattach-to-user-namespace ; do
+         exiftool postgresql httpie ffmpeg youtube-dl mobile-shell graphviz \
+         the_silver_searcher tmux fzf maven reattach-to-user-namespace \
+         poppler ; do
     brew install $x
 done
 
