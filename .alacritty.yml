@@ -113,8 +113,8 @@ colors:
 
    # Colors the cursor will use if `custom_cursor_colors` is true
    cursor:
-     background: '0xffffff'
-     foreground: '0x000000'
+     cursor: '0xffffff'
+     text: '0x000000'
 
    # Normal colors
    normal:
@@ -192,6 +192,10 @@ visual_bell:
 # specified string every time that binding is activated. These should generally
 # be escape sequences, but they can be configured to send arbitrary strings of
 # bytes. Possible values of `action` include `Paste` and `PasteSelection`.
+#
+# Want to add a binding (e.g. "PageUp") but are unsure what the X sequence
+# (e.g. "\x1b[5~") is? Open another terminal (like xterm) without tmux,
+# then run `showkey -a` to get the sequence associated to a key combination.
 key_bindings:
   - { key: V,        mods: Command, action: Paste                        }
   - { key: C,        mods: Command, action: Copy                         }
@@ -266,6 +270,8 @@ mouse:
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
+
+hide_cursor_when_typing: false
 
 # Shell
 #
