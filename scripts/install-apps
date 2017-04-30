@@ -4,7 +4,7 @@ set -e
 
 brew tap cheba/rust-nightly
 
-for x in rust-nightly jq ocaml ghc cabal-install r go \
+for x in rust-nightly jq ocaml ghc cabal-install r go scala \
          exiftool postgresql httpie ffmpeg youtube-dl mobile-shell graphviz \
          the_silver_searcher tmux fzf maven reattach-to-user-namespace \
          poppler closure-compiler ; do
