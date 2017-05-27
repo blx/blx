@@ -178,7 +178,7 @@ if has("autocmd")
     autocmd FileType clojure,python,json,vim inoremap <buffer> ; :
     autocmd FileType clojure,python,json,vim inoremap <buffer> : ;
 
-    autocmd FileType purescript setlocal shiftwidth=2
+    autocmd FileType java,purescript setlocal shiftwidth=2
 
 "    autocmd FileType java,c,javascript,sql,php silent! <buffer> iunmap ;
 "    autocmd FileType java,c,javascript,sql,php silent! <buffer> iunmap :
