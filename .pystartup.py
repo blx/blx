@@ -3,6 +3,8 @@
 # Everything in this module will be executed/made available whenever a REPL is
 # launched.
 
+import csv
+import json
 import re
 import os
 import itertools as it
