@@ -2,9 +2,7 @@
 
 set -e
 
-brew tap cheba/rust-nightly
-
-for x in rust-nightly jq ocaml ghc cabal-install r go scala \
+for x in jq ocaml ghc cabal-install r go scala \
          exiftool postgresql httpie ffmpeg youtube-dl mobile-shell graphviz \
          the_silver_searcher tmux fzf maven reattach-to-user-namespace \
          poppler closure-compiler ; do
@@ -16,8 +14,8 @@ mkdir -p ~/go
 
 brew tap caskroom/versions
 
-for x in betterzipql google-chrome dropbox bartender1 spotify iterm2 soundflower \
-         transmission flux geotag mplayerx lightroom3 slack; do
+for x in betterzipql google-chrome dropbox bartender spotify iterm2 \
+         transmission flux geotag mplayerx slack; do
     brew cask install $x
 done
 
@@ -31,3 +29,5 @@ for x in httpstat; do
 done
 
 pip install aws
+
+curl https://sh.rustup.rs -sSf | sh
