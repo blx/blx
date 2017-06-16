@@ -10,26 +10,23 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 defaults -CurrentHost write com.apple.ImageCapture disableHotPlug -bool true
 
-## Disable Caps Lock in preparation for installing Seil (which will remap it to Esc)
-#  (https://apple.stackexchange.com/a/88096)
-#  First, ugly script to get our keyboard's VendorID and ProductID:
-read kb_vendorid kb_productid < \
-    <(ioreg -n IOHIDKeyboard -r \
-      | grep -e 'class IOHIDKeyboard' -e VendorID\" -e Product \
-      | sed -nE 's/^.*= *//p' \
-      | tail -n 2 \
-      | paste -s -)
 
-# Now disable Caps Lock (map key 0 to action -1)
-defaults -currentHost write \
-    com.apple.keyboard.modifiermapping.${kb_vendorid}-${kb_productid}-0 \
-    -array-add $(printf '%s' '<dict>' \
-                                '<key>HIDKeyboardModifierMappingDst</key>' \
-                                '<integer>-1</integer>' \
-                                '<key>HIDKeyboardModifierMappingSrc</key>' \
-                                '<integer>0</integer>' \
-                             '</dict>')
-
+# Map <Caps Lock> -> <Escape>
+#   @since 10.10 Sierra
+#   @see [Apple TN2450](https://developer.apple.com/library/content/technotes/tn2450/_index.html)
+read __hidcapslockesc < <(python -c "$(cat <<END
+import json
+print(json.dumps({
+    "UserKeyMapping":[
+        {
+            "HIDKeyboardModifierMappingSrc": 0x700000039,
+            "HIDKeyboardModifiedMappingDst": 0x700000029
+        }
+    ]
+}))
+END
+)")
+hidutil property --set "$__hidcapslockesc"
 
 
 ### Homebrew
@@ -53,18 +50,12 @@ done
 
 brew install caskroom/cask/brew-cask
 
-brew cask install seil
-
 
 # Install remaining apps (eg spotify) with install-apps script
 
 
 # wrap git for the rest of this script
 eval "$(hub alias -s)"
-
-
-# Remap Caps Lock to Escape
-/Applications/Seil.app/Contents/Library/bin/seil set keycode_capslock 53
 
 
 ### Setup Vim plugins
