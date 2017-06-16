@@ -74,6 +74,7 @@ vim_setup() {
     git clone fatih/vim-go
     git clone guns/vim-clojure-static
     git clone hail2u/vim-css3-syntax
+    git clone isRuslan/vim-es6
     git clone kchmck/vim-coffee-script
     git clone leafgarland/typescript-vim
     git clone othree/html5.vim
