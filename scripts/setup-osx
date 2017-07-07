@@ -89,7 +89,7 @@ vim_setup() {
     git clone tpope/vim-surround
 
     git clone wincent/command-t
-    cd command-t/ruby/command-t
+    cd command-t/ruby/command-t/ext/command-t
     ruby extconf.rb
     make
 
