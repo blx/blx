@@ -97,3 +97,9 @@ def spit(f, txt):
     """spit(f, txt): Writes `txt` to file at `f`"""
     with open(f, 'w') as fp:
         fp.write(txt)
+
+
+try:
+    from skio_pystartup import *
+except ImportError:
+    pass
