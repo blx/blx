@@ -1,18 +1,15 @@
-# PYSTARTUP
+# PYTHONSTARTUP
 #
 # Everything in this module will be executed/made available whenever a REPL is
 # launched.
 
-import csv
-import json
+import csv, json
 import re
-import os
-import itertools as it
-import operator as op
+import os, sys
+import itertools as it, operator as op
 from pprint import pprint
-from collections import namedtuple, Counter
-from functools import reduce
-from functools import partial as p
+from collections import defaultdict, Counter, namedtuple
+from functools import reduce, partial as p
 
 
 ### REPL stuff
