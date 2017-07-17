@@ -5,6 +5,9 @@ if [ -e "${HOME}/.bash_aliases" ]; then
     source "${HOME}/.bash_aliases"
 fi
 
+export PATH=~/bin:~/.local/bin:~/.cargo/bin:~/.jenv/bin:/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin
+
+
 # Point vi to vim, which points to homebrew vim
 # which supports copy/paste and other stuff
 alias vi='vim'
@@ -15,6 +18,9 @@ alias py='python2'
 
 # Use github's wrapper around git
 eval "$(hub alias -s)"
+
+# Manage JDKs
+eval "$(jenv init -)"
 
 #export PS1="\u@\h \W\$ "
 export PS1="\[\e[38;5;33m\]\u@\h \W\$\[\e[0m\] "
@@ -99,7 +105,6 @@ hor() {
     date -r $(($1 / 1000)) -u
 }
 
-export PATH=~/bin:~/.local/bin:~/.cargo/bin::/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin
 
 
 if [ -e "${HOME}/.git-completion" ]; then
