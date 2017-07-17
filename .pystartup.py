@@ -59,6 +59,9 @@ def merge(*dicts):
     merge *dicts :: *{} -> {}"""
     return dict(it.chain.from_iterable(items(d) for d in dicts if d))
 
+def __namestr__(x):
+    return getattr(x, '__name__', None) or x.__str__()
+
 def comp(*fns):
     if not fns:
         return identity
@@ -69,13 +72,13 @@ def comp(*fns):
         for f in fns[-2::-1]:
             x = f(x)
         return x
-    _comped.__name__ = 'comp(%s)' % ', '.join(map(op.attrgetter('__name__'), fns))
+    _comped.__name__ = 'comp(%s)' % ', '.join(map(__namestr__, fns))
     return _comped
 
 def juxt(*fns):
     def _juxted(*a, **kw):
         return [f(*a, **kw) for f in fns]
-    _juxted.__name__ = 'juxt(%s)' % ', '.join(map(op.attrgetter('__name__'), fns))
+    _juxted.__name__ = 'juxt(%s)' % ', '.join(map(__namestr__, fns))
     return _juxted
 
 def iterate(f, x):
