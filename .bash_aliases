@@ -43,10 +43,6 @@ alias startpg='postgres -D /usr/local/var/postgres'
 
 alias stripexif='exiftool -all= -overwrite_original'
 
-# Start a static file server at localhost:8000 rooted in current dir.
-# (Port number can also be passed in, eg. `serve 9001`)
-alias serve='~/scripts/serve'
-
 # Recursively remove all .pyc in this dir and subdirs
 alias pyclean='find . -name "*.pyc" -exec rm -f {} \;'
 
