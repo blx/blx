@@ -2,7 +2,7 @@
 
 set -e
 
-for x in jq ocaml ghc cabal-install r go scala \
+for x in jq ocaml ghc cabal-install r go scala jenv \
          exiftool postgresql httpie ffmpeg youtube-dl mobile-shell graphviz \
          the_silver_searcher tmux fzf maven reattach-to-user-namespace \
          poppler closure-compiler ; do
