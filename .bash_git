@@ -26,6 +26,7 @@ alias gLL='git lg | head -n10'
 # note: gm is usually GraphicsMagick
 alias gmer='git merge'
 alias gp='git push'
+alias gpO='git push origin'
 alias gpl='git pull'
 #alias gplv3='git fetch stallman'
 alias gri='git rebase -i'
