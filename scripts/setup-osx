@@ -8,7 +8,7 @@ set -e
 
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
-defaults -CurrentHost write com.apple.ImageCapture disableHotPlug -bool true
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 
 # Map <Caps Lock> -> <Escape>
@@ -48,7 +48,7 @@ for x in gcc rlwrap wget git vim gpg \
     brew install $x
 done
 
-brew install caskroom/cask/brew-cask
+#brew install caskroom/cask/brew-cask
 
 
 # Install remaining apps (eg spotify) with install-apps script

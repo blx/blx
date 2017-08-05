@@ -2,10 +2,10 @@
 
 set -e
 
-for x in jq ocaml ghc cabal-install r go scala jenv \
+for x in jq ocaml stack r go scala jenv htop \
          exiftool postgresql httpie ffmpeg youtube-dl mobile-shell graphviz \
          the_silver_searcher tmux fzf maven reattach-to-user-namespace \
-         poppler closure-compiler ; do
+         poppler closure-compiler parallel ; do
     brew install $x
 done
 
@@ -15,7 +15,7 @@ mkdir -p ~/go
 brew tap caskroom/versions
 
 for x in betterzipql google-chrome dropbox bartender spotify iterm2 \
-         transmission flux geotag mplayerx slack; do
+         qlstephen transmission flux geotag mplayerx slack; do
     brew cask install $x
 done
 
@@ -24,10 +24,8 @@ for x in typescript@next grunt-cli bower
     npm install -g $x
 done
 
-for x in httpstat; do
-    go get $x
-done
+go get -u github.com/davecheney/httpstat
 
-pip install aws
+pip install awscli
 
 curl https://sh.rustup.rs -sSf | sh
