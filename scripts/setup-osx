@@ -72,7 +72,6 @@ vim_setup() {
     git clone digitaltoad/vim-jade
     git clone elzr/vim-json
     git clone fatih/vim-go
-    git clone guns/vim-clojure-static
     git clone hail2u/vim-css3-syntax
     git clone isRuslan/vim-es6
     git clone kchmck/vim-coffee-script
@@ -87,6 +86,12 @@ vim_setup() {
     git clone tpope/vim-fireplace
     git clone tpope/vim-repeat
     git clone tpope/vim-surround
+
+    git clone guns/vim-clojure-static
+    pushd vim-clojure-static
+    # Temp: work around longstanding performance issue
+    git checkout -b issue-77 origin/issue-77
+    popd
 
     git clone wincent/command-t
     cd command-t/ruby/command-t/ext/command-t
