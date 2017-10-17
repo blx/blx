@@ -173,6 +173,7 @@ if has("autocmd")
     autocmd BufNewFile,BufRead *.less set filetype=css
     autocmd BufNewFile,BufRead *.es6 set filetype=javascript
     autocmd BufNewFile,BufRead *.cljs,*.cljs.hl set filetype=clojure
+    autocmd BufNewFile,BufRead *.config setlocal shiftwidth=2 filetype=yaml
 
     " Optimize for typing colons in relevant languages
     autocmd FileType clojure,python,json,vim inoremap <buffer> ; :
