@@ -26,3 +26,5 @@ Icon
 *.swo
 *.swn
 *.swm
+
+infer-out
