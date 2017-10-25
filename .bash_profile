@@ -105,6 +105,11 @@ hor() {
     date -r $(($1 / 1000)) -u
 }
 
+jsondiff() {
+    # `-S`ort the keys
+    diff <(jq -S . "$1") <(jq -S . "$2")
+}
+
 
 
 if [ -e "${HOME}/.git-completion" ]; then
