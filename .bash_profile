@@ -22,6 +22,8 @@ eval "$(hub alias -s)"
 # Manage JDKs
 eval "$(jenv init -)"
 
+export NODE_PATH="$(npm prefix -g --quiet)/lib/node_modules"
+
 #export PS1="\u@\h \W\$ "
 export PS1="\[\e[38;5;33m\]\u@\h \W\$\[\e[0m\] "
 #export PS1="\[\e[48;5;33m\]\e[97m\]\u@\h \W\$\[\e[0m\] "
