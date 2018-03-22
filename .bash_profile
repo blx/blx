@@ -22,6 +22,9 @@ eval "$(hub alias -s)"
 # Manage JDKs
 eval "$(jenv init -)"
 
+# Provide TTY for Krypton GPG git commit signing
+export GPG_TTY=$(tty)
+
 export NODE_PATH="$(npm prefix -g --quiet)/lib/node_modules"
 
 #export PS1="\u@\h \W\$ "
