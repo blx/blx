@@ -6,7 +6,7 @@
     ss = stash
     sp = stash pop
 [core]
-    editor = vi
+    editor = vim
     excludesfile = ~/.gitignore-global
 [filter "lfs"]
     clean = git-lfs clean -- %f
