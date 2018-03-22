@@ -57,5 +57,7 @@ now() { node -e 'process.stdout.write(""+ +new Date())' | pbcopy; }
 
 pw() { openssl rand -base64 24; }
 
+jarls() { jar -tf "$1" | grep -v '/$'; }
+
 #alias runsight='cd ~/projects/itunes-sight; source sightenv/bin/activate; cd app; sass --watch sight/assets:sight/static/css & python runserver.py';
 
