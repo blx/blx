@@ -5,8 +5,6 @@ if [ -e "${HOME}/.bash_aliases" ]; then
     source "${HOME}/.bash_aliases"
 fi
 
-export PATH=~/bin:~/.local/bin:~/.cargo/bin:~/.jenv/bin:/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin
-
 
 # Point vi to vim, which points to homebrew vim
 # which supports copy/paste and other stuff
@@ -118,6 +116,8 @@ jsondiff() {
     diff <(jq -S . "$1") <(jq -S . "$2")
 }
 
+
+export PATH=~/bin:~/.local/bin:~/.cargo/bin:~/.jenv/bin:/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin
 
 
 if [ -e "${HOME}/.git-completion" ]; then
