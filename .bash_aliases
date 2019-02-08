@@ -19,6 +19,7 @@ alias cd...='cd ../../..'
 alias pd='pushd'
 
 alias mkdirp='mkdir -p'
+alias jobs='jobs -l'
 
 # Delete to Trash instead of using `rm`
 alias xx='trash'
