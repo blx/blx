@@ -36,7 +36,6 @@ alias ff='ggrep --recursive --line-number --color'
 # Repeat previous command using `sudo`
 alias fuck='sudo $(history -p \!\!)'
 
-alias clj='lein repl'
 alias ocaml='rlwrap ocaml'
 
 alias openssl='/usr/local/opt/openssl/bin/openssl'
