@@ -3,6 +3,7 @@
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
     llog = log --pretty=fuller
     rb = rebase
+    rset = reset
     ss = stash
     sp = stash pop
 [core]
