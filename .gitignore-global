@@ -28,3 +28,5 @@ Icon
 *.swm
 
 infer-out
+
+stats.json
