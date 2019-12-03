@@ -26,3 +26,5 @@
     stripLeadingSymbols = false
 [include]
     path = ~/.blx-private/.gitconfig
+[diff]
+	noprefix = true
