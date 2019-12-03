@@ -18,7 +18,7 @@ alias py='python2'
 eval "$(hub alias -s)"
 
 # Manage JDKs
-eval "$(jenv init -)"
+#eval "$(jenv init -)"
 
 # Provide TTY for Krypton GPG git commit signing
 export GPG_TTY=$(tty)
@@ -126,7 +126,7 @@ https-cert() {
 }
 
 
-export PATH=~/bin:~/.local/bin:~/.cargo/bin:~/.jenv/bin:/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin
+export PATH=~/bin:~/.local/bin:~/.cargo/bin:/usr/local/opt/ruby/bin:~/.jenv/bin:/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin
 
 
 if [ -e "${HOME}/.git-completion" ]; then
