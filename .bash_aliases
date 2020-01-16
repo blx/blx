@@ -54,7 +54,7 @@ uuid() { python3 -c 'import uuid; print(str(uuid.uuid4()), end="")' | pbcopy; }
 
 now() { node -e 'process.stdout.write(""+ +new Date())' | pbcopy; }
 
-pw() { openssl rand -base64 24; }
+pw() { openssl rand -base64 ${1:-32}; }
 
 rand() { LC_CTYPE=C tr -dc A-Za-z0-9 < /dev/urandom | head -c $1 | xargs; }
 
