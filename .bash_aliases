@@ -30,9 +30,6 @@ alias rm='grm -I'
 # Format the json in the clipboard
 alias jqc='pbpaste | jq'
 
-# Find stuff
-alias ff='ggrep --recursive --line-number --color'
-
 # Repeat previous command using `sudo`
 alias fuck='sudo $(history -p \!\!)'
 
@@ -42,7 +39,6 @@ alias openssl='/usr/local/opt/openssl/bin/openssl'
 
 alias hs='httpstat'
 
-alias ping1='ping -c 1'
 alias brewup='brew update && brew upgrade && brew cleanup'
 alias startpg='postgres -D /usr/local/var/postgres'
 
