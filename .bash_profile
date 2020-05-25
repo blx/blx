@@ -15,7 +15,7 @@ alias python='python2'
 alias py='python2'
 
 # Use github's wrapper around git
-eval "$(hub alias -s)"
+#eval "$(hub alias -s)"
 
 # Manage JDKs
 #eval "$(jenv init -)"
