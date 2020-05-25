@@ -142,6 +142,6 @@ if [ -e "${HOME}/.bash_blx" ]; then
     source "${HOME}/.bash_blx"
 fi
 
-if [ -e "${HOME}/.bash_skio" ]; then
-    source "${HOME}/.bash_skio"
+if [ -e "${HOME}/.bash_work" ]; then
+    source "${HOME}/.bash_work"
 fi
