@@ -27,6 +27,7 @@ Icon
 *.swn
 *.swm
 
+out
 infer-out
 
 stats.json
