@@ -21,6 +21,8 @@ alias pd='pushd'
 alias mkdirp='mkdir -p'
 alias jobs='jobs -l'
 
+alias rga='rg --hidden --no-ignore'
+
 # Delete to Trash instead of using `rm`
 alias xx='trash'
 
