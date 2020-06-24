@@ -21,7 +21,7 @@ alias pd='pushd'
 alias mkdirp='mkdir -p'
 alias jobs='jobs -l'
 
-alias rga='rg --hidden --no-ignore'
+alias rga='rg --hidden --no-ignore --glob !.git/*'
 
 # Delete to Trash instead of using `rm`
 alias xx='trash'
