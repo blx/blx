@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Ansible??? No sorry I don't know her 💁
-
 set -e
 
 ### OS X
@@ -43,8 +41,8 @@ brew analytics off
 brew install coreutils
 
 for x in gcc rlwrap wget git vim gpg \
-         python python3 leiningen node \
-         trash hub heroku-toolbelt planck; do
+         python3 leiningen node \
+         trash planck; do
     brew install $x
 done
 
@@ -53,9 +51,6 @@ done
 
 # Install remaining apps (eg spotify) with install-apps script
 
-
-# wrap git for the rest of this script
-eval "$(hub alias -s)"
 
 
 ### Setup Vim plugins
@@ -68,32 +63,32 @@ vim_setup() {
 
     # Everything else
     cd ~/.vim/bundle
-    git clone cespare/vim-toml
-    git clone digitaltoad/vim-jade
-    git clone elzr/vim-json
-    git clone fatih/vim-go
-    git clone hail2u/vim-css3-syntax
-    git clone isRuslan/vim-es6
-    git clone kchmck/vim-coffee-script
-    git clone leafgarland/typescript-vim
-    git clone othree/html5.vim
-    git clone plasticboy/vim-markdown
-    git clone rust-lang/rust.vim
+    git clone git@github.com:cespare/vim-toml.git
+    git clone git@github.com:digitaltoad/vim-jade.git
+    git clone git@github.com:elzr/vim-json.git
+    git clone git@github.com:fatih/vim-go.git
+    git clone git@github.com:hail2u/vim-css3-syntax.git
+    git clone git@github.com:isRuslan/vim-es6.git
+    git clone git@github.com:kchmck/vim-coffee-script.git
+    git clone git@github.com:leafgarland/typescript-vim.git
+    git clone git@github.com:othree/html5.vim.git
+    git clone git@github.com:plasticboy/vim-markdown.git
+    git clone git@github.com:rust-lang/rust.vim.git
 
-    git clone bling/vim-airline
-    git clone haya14busa/incsearch.vim
-    git clone scrooloose/nerdtree
-    git clone tpope/vim-fireplace
-    git clone tpope/vim-repeat
-    git clone tpope/vim-surround
+    git clone git@github.com:bling/vim-airline.git
+    git clone git@github.com:haya14busa/incsearch.vim.git
+    git clone git@github.com:scrooloose/nerdtree.git
+    git clone git@github.com:tpope/vim-fireplace.git
+    git clone git@github.com:tpope/vim-repeat.git
+    git clone git@github.com:tpope/vim-surround.git
 
-    git clone guns/vim-clojure-static
+    git clone git@github.com:guns/vim-clojure-static.git
     pushd vim-clojure-static
     # Temp: work around longstanding performance issue
     git checkout -b issue-77 origin/issue-77
     popd
 
-    git clone wincent/command-t
+    git clone git@github.com:wincent/command-t.git
     cd command-t/ruby/command-t/ext/command-t
     ruby extconf.rb
     make
@@ -110,8 +105,8 @@ chmod +x ~/.git-completion
 
 ### Python
 
-echo 'Sudo required to ensure proper ownership on python library location'
-sudo chown -R $(basename ~):admin /usr/local/lib/python2.7
+#echo 'Sudo required to ensure proper ownership on python library location'
+#sudo chown -R $(basename ~):admin /usr/local/lib/python2.7
 pip install virtualenv requests
 
 
