@@ -10,10 +10,6 @@ fi
 # which supports copy/paste and other stuff
 alias vi='vim'
 
-# Use homebrew python instead of system
-alias python='python2'
-alias py='python2'
-
 # Use github's wrapper around git
 #eval "$(hub alias -s)"
 
