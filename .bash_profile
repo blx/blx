@@ -10,9 +10,6 @@ fi
 # which supports copy/paste and other stuff
 alias vi='vim'
 
-# Use github's wrapper around git
-#eval "$(hub alias -s)"
-
 # Manage JDKs
 #eval "$(jenv init -)"
 
