@@ -123,6 +123,7 @@ https-cert() {
 
 
 export PATH=~/bin:~/.local/bin:~/.cargo/bin:/usr/local/opt/ruby/bin:~/.jenv/bin:/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
 
 
 if [ -e "${HOME}/.git-completion" ]; then
