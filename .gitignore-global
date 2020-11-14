@@ -28,6 +28,8 @@ Icon
 *.swn
 *.swm
 
+dist-*
+
 out
 infer-out
 
@@ -37,3 +39,4 @@ package-lock.json
 .terraform
 *.tfstate
 *.tfstate.backup
+*.tfvars
