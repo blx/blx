@@ -1,4 +1,3 @@
-#!/bin/bash
 
 # `ls` (BSD version)
 #    -A All except . and ..
