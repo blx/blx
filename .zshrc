@@ -8,3 +8,5 @@ _git 2>/dev/null
 
 source "$HOME/.aliases"
 source "$HOME/.bash_git"
+
+export PATH="$HOME/bin:$PATH"
