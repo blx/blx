@@ -48,7 +48,7 @@ g() {
 # BRANCH
 gb() {
     if [ $# -ge 1 ]; then
-        if [ "$1" == '0d' ]; then
+        if [ "$1" = '0d' ]; then
             git branch -d "${@:2}"
         else
             git branch "$@"
