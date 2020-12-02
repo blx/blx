@@ -6,6 +6,8 @@ autoload -Uz compinit && compinit
 # prepare autocomplete
 _git 2>/dev/null
 
+bindkey -e
+
 source "$HOME/.aliases"
 source "$HOME/.bash_git"
 
