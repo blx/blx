@@ -37,6 +37,7 @@ stats.json
 package-lock.json
 
 .terraform
+*.terraform.lock.hcl
 *.tfstate
 *.tfstate.backup
 *.tfvars
