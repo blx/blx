@@ -28,6 +28,8 @@ Icon
 *.swn
 *.swm
 
+*_ed25519*
+
 dist-*
 
 out
