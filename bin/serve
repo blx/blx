@@ -5,6 +5,7 @@ command-line arg, rooted in the current directory."""
 
 import http.server
 import socketserver
+import sys
 
 class CORSRequestHandler(http.server.SimpleHTTPRequestHandler):
     def end_headers(self):
@@ -12,11 +13,14 @@ class CORSRequestHandler(http.server.SimpleHTTPRequestHandler):
         http.server.SimpleHTTPRequestHandler.end_headers(self)
 
 if __name__ == '__main__':
+    maybe_port = int(sys.argv[1]) if len(sys.argv) > 1 else None
+    port = maybe_port or 8000
+
     handler = CORSRequestHandler
     # m = CORSRequestHandler.extensions_map
     # m[''] = 'text/plain'
     # m.update({k: v + ';charset=UTF-8'
     #           for k, v in m.iteritems()})
-    with socketserver.TCPServer(("", 8000), handler) as httpd:
+    with socketserver.TCPServer(("", port), handler) as httpd:
         httpd.serve_forever()
 #    BaseHTTPServer.test(CORSRequestHandler, BaseHTTPServer.HTTPServer)
