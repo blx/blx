@@ -90,10 +90,11 @@ map / <Plug>(incsearch-forward)
 map ? <Plug>(incsearch-backward)
 
 " Find files quickly
-nnoremap <silent> <Leader>t :CommandT<CR>
-nnoremap <silent> <Leader>b :CommandTBuffer<CR>
+" nnoremap <silent> <Leader>t :CommandT<CR>
+" nnoremap <silent> <Leader>b :CommandTBuffer<CR>
 
-nnoremap <silent> <Leader><s-t> :FZF<CR>
+" nnoremap <silent> <Leader><s-t> :FZF<CR>
+nnoremap <silent> <Leader>t :FZF<CR>
 
 " NERDTree directory tree
 nmap <Leader>a :NERDTreeToggle<CR>
