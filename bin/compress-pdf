@@ -1,0 +1,7 @@
+#!/bin/zsh
+
+INFILE="$1"
+OUTFILE="${INFILE%.*}_smaller.pdf"
+
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH \
+  -dPDFSETTINGS=/printer -sOutputFile="$OUTFILE" "$INFILE"
