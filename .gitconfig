@@ -6,6 +6,7 @@
     rset = reset
     ss = stash
     sp = stash pop
+    br = branch
 [core]
     editor = nvim
     excludesfile = ~/.gitignore-global
