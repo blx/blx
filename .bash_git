@@ -58,6 +58,12 @@ gb() {
     fi
 }
 
+# From https://stackoverflow.com/questions/5188320/how-can-i-get-a-list-of-git-branches-ordered-by-most-recent-commit#comment46325412_5188364
+gbll() {
+    git for-each-ref --sort=committerdate refs/heads/ \
+        --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+}
+
 # COMMIT
 gt() {
     if [ $# -eq 1 ]; then
